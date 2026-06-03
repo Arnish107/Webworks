@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Washington's Wharf | British Fish &amp; Chips in Cumming, GA</title>
+<meta name="description" content="Washington's Wharf — authentic British fish and chips restaurant in Cumming, GA. Crispy battered fish, generous portions, full bar, dine-in and takeout. Located in Cumming City Center. Call (470) 533-2140.">
+<meta name="keywords" content="British fish and chips Cumming GA, fish and chips restaurant Cumming Georgia, Washington's Wharf Cumming, fish and chips Forsyth County, British pub Cumming GA">
+<meta property="og:title" content="Washington's Wharf | British Fish &amp; Chips — Cumming, GA">
+<meta property="og:description" content="Authentic British fish &amp; chips in Cumming City Center. Crispy fish, proper chips, full bar. Dine in or takeout.">
+<meta property="og:type" content="restaurant">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ─── DESIGN TOKENS ─────────────────────────────── */
+:root {
+  --navy:        #0d2240;
+  --navy-mid:    #1a3660;
+  --navy-light:  #243d6e;
+  --red:         #c8102e;
+  --red-dark:    #a60d25;
+  --red-light:   #e8213f;
+  --white:       #ffffff;
+  --off-white:   #f8f6f2;
+  --cream:       #fdf9f4;
+  --warm-gray:   #f2ede6;
+  --stone:       #d4c8b8;
+  --text:        #1a1a1a;
+  --text-mid:    #3d3530;
+  --text-muted:  #6b6259;
+  --gold:        #c9a84c;
+  --gold-light:  #e8c870;
+}
+
+/* ─── RESET ─────────────────────────────────────── */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+
+/* ─── UTILITY ────────────────────────────────────── */
+.container{max-width:1180px;margin:0 auto;padding:0 2rem}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+
+/* ─── NAV ─────────────────────────────────────────── */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:999;
+  background:var(--navy);
+  border-bottom:3px solid var(--red);
+  transition:box-shadow .3s;
+}
+#nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.4)}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  height:70px;padding:0 2rem;max-width:1280px;margin:0 auto;
+}
+.nav-logo{
+  display:flex;align-items:center;gap:12px;
+  font-family:'Libre Baskerville',serif;
+  font-size:1.15rem;font-weight:700;
+  color:var(--white);letter-spacing:.01em;
+}
+.nav-logo-badge{
+  width:42px;height:42px;
+  background:var(--red);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;flex-shrink:0;
+  border:2px solid rgba(255,255,255,.2);
+}
+.nav-logo-text span{display:block;font-size:.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:.25rem;list-style:none}
+.nav-links a{
+  font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.7);padding:.6rem .9rem;border-radius:3px;
+  transition:color .2s,background .2s;
+}
+.nav-links a:hover,.nav-links a.active{color:var(--white);background:rgba(255,255,255,.08)}
+.nav-order{
+  background:var(--red);color:var(--white)!important;
+  padding:.55rem 1.2rem!important;border-radius:3px;
+  transition:background .2s!important;
+}
+.nav-order:hover{background:var(--red-dark)!important}
+.nav-phone{
+  font-size:.8rem;font-weight:600;color:rgba(255,255,255,.75);
+  display:flex;align-items:center;gap:.4rem;margin-right:.5rem;
+}
+
+/* ─── PAGES ──────────────────────────────────────── */
+.page{display:none}
+.page.active{display:block}
+
+/* ─── UNION JACK STRIPE (decorative) ─────────────── */
+.uk-stripe{height:5px;background:linear-gradient(90deg,var(--navy) 0%,var(--navy) 30%,var(--red) 30%,var(--red) 40%,var(--white) 40%,var(--white) 60%,var(--red) 60%,var(--red) 70%,var(--navy) 70%,var(--navy) 100%)}
+
+/* ─── SECTION LABELS ─────────────────────────────── */
+.eyebrow{
+  font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--red);display:flex;align-items:center;gap:10px;margin-bottom:.8rem;
+}
+.eyebrow::after{content:'';display:block;width:36px;height:1px;background:var(--red);opacity:.5}
+.section-title{font-family:'Libre Baskerville',serif;font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:700;color:var(--navy);line-height:1.15;margin-bottom:1rem}
+.section-title em{font-style:italic;color:var(--red)}
+.section-lead{font-size:1.05rem;color:var(--text-muted);line-height:1.85;max-width:560px}
+
+/* ─── BUTTONS ────────────────────────────────────── */
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:'Source Sans 3',sans-serif;font-size:.8rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:.85rem 1.8rem;border-radius:3px;
+  transition:all .2s;cursor:pointer;border:none;
+}
+.btn-red{background:var(--red);color:var(--white)}
+.btn-red:hover{background:var(--red-dark);transform:translateY(-1px)}
+.btn-navy{background:var(--navy);color:var(--white)}
+.btn-navy:hover{background:var(--navy-mid);transform:translateY(-1px)}
+.btn-outline-white{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.4)}
+.btn-outline-white:hover{border-color:var(--white);background:rgba(255,255,255,.08)}
+.btn-outline-navy{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
+.btn-outline-navy:hover{background:var(--navy);color:var(--white)}
+
+/* ════════════════════════════════════════════════════
+   HOME PAGE
+════════════════════════════════════════════════════ */
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  background:var(--navy);
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;
+  padding-top:70px;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 65% 50%,rgba(200,16,46,.12) 0%,transparent 60%),
+    radial_gradient(ellipse at 10% 80%,rgba(201,168,76,.08) 0%,transparent 50%),
+    linear-gradient(160deg,#0d2240 0%,#071628 100%);
+}
+/* Subtle diagonal texture */
+.hero-bg::after{
+  content:'';position:absolute;inset:0;
+  background-image:repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,.015) 0px,
+    rgba(255,255,255,.015) 1px,
+    transparent 1px,
+    transparent 60px
+  );
+}
+.hero-inner{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:4rem;align-items:center;
+  max-width:1180px;margin:0 auto;padding:4rem 2rem 5rem;
+  width:100%;
+}
+.hero-left{animation:fadeUp .9s ease both}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(200,16,46,.2);border:1px solid rgba(200,16,46,.4);
+  color:rgba(255,255,255,.85);font-size:.72rem;font-weight:700;
+  letter-spacing:.15em;text-transform:uppercase;padding:.45rem 1rem;
+  border-radius:2px;margin-bottom:1.5rem;
+}
+.hero-tag::before{content:'🇬🇧';font-size:.9rem}
+.hero-h1{
+  font-family:'Libre Baskerville',serif;
+  font-size:clamp(2.6rem,5.5vw,4.2rem);
+  font-weight:700;color:var(--white);line-height:1.08;
+  margin-bottom:1.4rem;
+}
+.hero-h1 em{font-style:italic;color:var(--gold-light)}
+.hero-desc{
+  font-size:1.08rem;font-weight:300;color:rgba(255,255,255,.68);
+  line-height:1.85;max-width:480px;margin-bottom:2.2rem;
+}
+.hero-actions{display:flex;gap:.9rem;flex-wrap:wrap;align-items:center}
+.hero-phone-link{
+  color:rgba(255,255,255,.7);font-size:.88rem;font-weight:600;
+  display:flex;align-items:center;gap:.4rem;margin-top:.8rem;
+}
+.hero-phone-link:hover{color:var(--white)}
+.hero-phone-link svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}
+
+/* Food visual card */
+.hero-right{position:relative;animation:fadeUp .9s ease .2s both}
+.food-hero-card{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:8px;overflow:hidden;
+  backdrop-filter:blur(4px);
+}
+.food-photo-frame{
+  width:100%;aspect-ratio:4/3;
+  background:linear-gradient(135deg,#1e3a5f 0%,#0f2035 50%,#1a3050 100%);
+  position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.food-photo-emoji{font-size:7rem;opacity:.18;position:absolute;bottom:-10px;right:20px;transform:rotate(-12deg)}
+.food-label-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 30%,rgba(7,22,40,.85) 100%);
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:1.5rem;
+}
+.food-label-title{
+  font-family:'Libre Baskerville',serif;font-size:1.6rem;font-weight:700;
+  color:var(--white);margin-bottom:.25rem;
+}
+.food-label-sub{font-size:.82rem;color:rgba(255,255,255,.65);letter-spacing:.05em}
+.food-card-footer{
+  padding:1rem 1.5rem;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.food-card-tag{font-size:.72rem;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:.08em;text-transform:uppercase}
+.food-card-price{font-family:'Libre Baskerville',serif;font-size:1.5rem;font-weight:700;color:var(--gold-light)}
+
+/* Review strip in hero */
+.hero-reviews{
+  display:flex;gap:.6rem;margin-top:1.8rem;flex-wrap:wrap;
+}
+.review-pill{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+  border-radius:20px;padding:.45rem 1rem;
+  font-size:.75rem;color:rgba(255,255,255,.7);
+  display:flex;align-items:center;gap:.4rem;
+}
+.star-gold{color:#f5c842}
+
+/* Scroll indicator */
+.hero-scroll{
+  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:.4rem;
+  color:rgba(255,255,255,.3);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  animation:fadeUp 1.2s ease .6s both;
+}
+.scroll-line{width:1px;height:32px;background:linear-gradient(180deg,rgba(255,255,255,.3),transparent)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* FEATURES BAR */
+.features-bar{background:var(--red)}
+.features-inner{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  max-width:1280px;margin:0 auto;
+}
+.feature-cell{
+  padding:1.4rem 1.6rem;text-align:center;
+  border-right:1px solid rgba(255,255,255,.2);
+  transition:background .2s;
+}
+.feature-cell:last-child{border-right:none}
+.feature-cell:hover{background:rgba(0,0,0,.1)}
+.feature-icon{font-size:1.5rem;margin-bottom:.35rem}
+.feature-label{
+  font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(255,255,255,.75);margin-bottom:.15rem;
+}
+.feature-val{font-size:.88rem;font-weight:600;color:var(--white)}
+
+/* HOURS PANEL */
+.hours-section{background:var(--off-white);padding:5rem 0}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;max-width:900px;margin:0 auto}
+.hours-table-wrap{background:var(--white);border:1px solid var(--stone);border-radius:6px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.hours-table-head{background:var(--navy);padding:1rem 1.5rem;display:flex;align-items:center;gap:.6rem}
+.hours-table-head span{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.hours-table-head::before{content:'🕐';font-size:1rem}
+.hours-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:.75rem 1.5rem;border-bottom:1px solid var(--warm-gray);
+  font-size:.9rem;
+}
+.hours-row:last-child{border-bottom:none}
+.hours-day{color:var(--text-mid);font-weight:400}
+.hours-time{font-weight:700;color:var(--navy)}
+.hours-time.extended{color:var(--red)}
+.hours-cta-side{display:flex;flex-direction:column;gap:1.2rem}
+.info-card{
+  background:var(--white);border:1px solid var(--stone);border-radius:6px;
+  padding:1.4rem;border-left:4px solid var(--red);
+}
+.info-card-label{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.4rem}
+.info-card-val{font-size:.95rem;color:var(--navy);font-weight:600;line-height:1.5}
+.info-card-val a{color:var(--navy)}
+.info-card-val a:hover{color:var(--red)}
+
+/* ABOUT TEASER */
+.about-teaser{background:var(--cream);padding:5.5rem 0}
+.about-teaser-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.about-visual-stack{position:relative;height:460px}
+.visual-card-main{
+  position:absolute;left:0;top:0;width:82%;
+  background:var(--navy);border-radius:6px;overflow:hidden;
+  aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 12px 40px rgba(13,34,64,.25);
+}
+.visual-card-main-inner{font-size:9rem;opacity:.12;transform:rotate(-8deg)}
+.visual-card-accent{
+  position:absolute;right:0;bottom:40px;width:55%;
+  background:var(--red);color:var(--white);
+  border-radius:6px;padding:1.5rem;
+  box-shadow:0 8px 24px rgba(200,16,46,.3);
+}
+.accent-card-num{font-family:'Libre Baskerville',serif;font-size:2.8rem;font-weight:700;line-height:1}
+.accent-card-label{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.8;margin-top:.3rem}
+.visual-badge{
+  position:absolute;top:12px;right:12px;
+  background:var(--gold);color:var(--navy);
+  font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:.35rem .75rem;border-radius:2px;
+}
+.about-text-quotes{
+  margin:1.8rem 0;
+  border-left:4px solid var(--red);
+  padding:1rem 0 1rem 1.5rem;
+}
+.about-text-quotes p{
+  font-family:'Libre Baskerville',serif;font-style:italic;
+  font-size:1.1rem;color:var(--navy);line-height:1.7;
+}
+.about-text-quotes cite{display:block;font-size:.75rem;font-style:normal;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);margin-top:.5rem}
+.about-text p{font-size:1rem;color:var(--text-mid);line-height:1.9;margin-bottom:1rem}
+
+/* REVIEWS STRIP */
+.reviews-strip{background:var(--navy);padding:4.5rem 0}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.review-card{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+  border-radius:6px;padding:1.6rem;
+  transition:background .2s,border-color .2s;
+}
+.review-card:hover{background:rgba(255,255,255,.08);border-color:rgba(200,16,46,.4)}
+.review-stars{color:#f5c842;font-size:.9rem;margin-bottom:.8rem;letter-spacing:.05em}
+.review-text{
+  font-size:.88rem;color:rgba(255,255,255,.72);line-height:1.75;
+  margin-bottom:1.2rem;font-style:italic;
+}
+.review-author{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.5rem}
+.review-author::before{content:'—'}
+
+/* CTA BAND */
+.cta-band{background:var(--red);padding:3.5rem 0;text-align:center}
+.cta-band h2{
+  font-family:'Libre Baskerville',serif;font-size:1.9rem;font-weight:700;
+  color:var(--white);margin-bottom:.6rem;
+}
+.cta-band p{font-size:1rem;color:rgba(255,255,255,.75);margin-bottom:1.8rem}
+.cta-band-actions{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
+.btn-white{background:var(--white);color:var(--red);font-family:'Source Sans 3',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.85rem 1.8rem;border-radius:3px;border:none;cursor:pointer;transition:background .2s,transform .15s}
+.btn-white:hover{background:var(--off-white);transform:translateY(-1px)}
+.btn-outline-white-red{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.5);font-family:'Source Sans 3',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.85rem 1.8rem;border-radius:3px;cursor:pointer;transition:all .2s}
+.btn-outline-white-red:hover{border-color:var(--white);background:rgba(255,255,255,.1)}
+
+/* ════════════════════════════════════════════════════
+   MENU PAGE
+════════════════════════════════════════════════════ */
+.menu-page-hero{
+  padding:120px 0 50px;
+  background:linear-gradient(160deg,var(--navy) 0%,#071628 100%);
+  position:relative;text-align:center;overflow:hidden;
+}
+.menu-page-hero::before{
+  content:'🐟';
+  position:absolute;font-size:18rem;opacity:.03;
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+.menu-page-hero .section-title{color:var(--white);margin:0 auto 1rem}
+.menu-page-hero .section-lead{margin:0 auto;color:rgba(255,255,255,.55);text-align:center}
+.menu-page-hero .eyebrow{justify-content:center}
+.menu-page-hero .eyebrow::after{display:none}
+
+.menu-body{background:var(--cream);padding:4.5rem 0}
+
+/* Tab Nav */
+.menu-tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:3rem;border-bottom:2px solid var(--stone);padding-bottom:0}
+.tab-btn{
+  font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:.7rem 1.4rem;border-radius:4px 4px 0 0;border:none;
+  background:transparent;color:var(--text-muted);cursor:pointer;
+  transition:all .2s;position:relative;bottom:-2px;
+  border-bottom:2px solid transparent;
+}
+.tab-btn:hover{color:var(--navy)}
+.tab-btn.active{color:var(--red);border-bottom:2px solid var(--red);background:var(--cream)}
+
+/* Menu sections */
+.menu-section{display:none}
+.menu-section.active{display:block}
+
+.menu-cat-header{margin-bottom:2rem}
+.menu-cat-title{font-family:'Libre Baskerville',serif;font-size:1.8rem;font-weight:700;color:var(--navy);margin-bottom:.3rem;display:flex;align-items:center;gap:.6rem}
+.menu-cat-desc{font-size:.9rem;color:var(--text-muted);font-style:italic;max-width:560px}
+
+.menu-featured{
+  background:var(--navy);border-radius:8px;overflow:hidden;
+  margin-bottom:2rem;display:grid;grid-template-columns:1fr 1fr;
+}
+.menu-featured-text{padding:2.5rem 3rem;display:flex;flex-direction:column;justify-content:center}
+.menu-featured-text .eyebrow{color:var(--gold);margin-bottom:.8rem}
+.menu-featured-text .eyebrow::after{background:var(--gold)}
+.menu-featured-name{font-family:'Libre Baskerville',serif;font-size:2rem;font-weight:700;color:var(--white);margin-bottom:.8rem}
+.menu-featured-desc{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.8;margin-bottom:1.5rem}
+.menu-featured-price{font-family:'Libre Baskerville',serif;font-size:2.5rem;font-weight:700;color:var(--gold-light)}
+.menu-featured-includes{font-size:.78rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.1em;margin-top:.2rem}
+.menu-featured-visual{
+  background:linear-gradient(135deg,rgba(200,16,46,.3) 0%,rgba(200,16,46,.05) 100%);
+  display:flex;align-items:center;justify-content:center;
+  font-size:9rem;opacity:.5;
+  position:relative;min-height:200px;
+}
+
+.menu-items-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:2.5rem}
+.menu-item-card{
+  background:var(--white);border:1px solid var(--stone);border-radius:6px;
+  padding:1.3rem 1.5rem;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;
+  transition:border-color .2s,transform .15s,box-shadow .15s;
+}
+.menu-item-card:hover{border-color:var(--red);transform:translateY(-2px);box-shadow:0 4px 16px rgba(200,16,46,.1)}
+.item-info{flex:1}
+.item-name{font-family:'Libre Baskerville',serif;font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
+.item-desc{font-size:.83rem;color:var(--text-muted);line-height:1.6}
+.item-sauce{font-size:.75rem;font-weight:600;color:var(--red);margin-top:.4rem;text-transform:uppercase;letter-spacing:.06em}
+.item-price{
+  font-family:'Libre Baskerville',serif;font-size:1.15rem;font-weight:700;color:var(--red);
+  white-space:nowrap;padding-top:2px;flex-shrink:0;
+}
+
+.menu-addons{
+  background:var(--off-white);border:1px solid var(--stone);border-radius:6px;
+  padding:1.8rem 2rem;margin-bottom:2rem;
+}
+.menu-addons-title{font-family:'Libre Baskerville',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.addons-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}
+.addon-item{
+  background:var(--white);border:1px solid var(--stone);border-radius:4px;
+  padding:.9rem 1rem;text-align:center;transition:border-color .2s;
+}
+.addon-item:hover{border-color:var(--red)}
+.addon-name{font-size:.83rem;font-weight:700;color:var(--navy);margin-bottom:.25rem}
+.addon-price{font-size:.9rem;font-weight:700;color:var(--red)}
+
+.sides-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem}
+
+.bar-hero-card{
+  background:var(--navy);border-radius:8px;padding:2.5rem;
+  margin-bottom:2rem;display:flex;align-items:center;gap:3rem;
+}
+.bar-hero-icon{font-size:4rem;flex-shrink:0}
+.bar-hero-text h3{font-family:'Libre Baskerville',serif;font-size:1.5rem;font-weight:700;color:var(--gold-light);margin-bottom:.5rem}
+.bar-hero-text p{font-size:.92rem;color:rgba(255,255,255,.65);line-height:1.7}
+.bar-items-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.bar-item{
+  background:var(--white);border:1px solid var(--stone);border-radius:6px;
+  padding:1.2rem;text-align:center;transition:border-color .2s;
+}
+.bar-item:hover{border-color:var(--gold)}
+.bar-item-icon{font-size:2rem;margin-bottom:.6rem}
+.bar-item-name{font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:.2rem}
+.bar-item-desc{font-size:.78rem;color:var(--text-muted)}
+
+.menu-note{
+  background:rgba(200,16,46,.06);border:1px solid rgba(200,16,46,.2);
+  border-radius:4px;padding:1rem 1.3rem;
+  font-size:.82rem;color:var(--text-muted);font-style:italic;
+  display:flex;align-items:flex-start;gap:.6rem;margin-top:1.5rem;
+}
+.menu-note::before{content:'ℹ️';flex-shrink:0;margin-top:1px}
+
+/* Fries choice band */
+.fries-band{
+  background:linear-gradient(90deg,var(--navy) 0%,var(--navy-mid) 100%);
+  border-radius:6px;padding:1.5rem 2rem;
+  display:grid;grid-template-columns:auto 1fr 1fr;align-items:center;gap:2rem;
+  margin:1.5rem 0;
+}
+.fries-band-icon{font-size:2.5rem}
+.fries-style{border-left:1px solid rgba(255,255,255,.15);padding-left:1.5rem}
+.fries-style-name{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.25rem}
+.fries-style-desc{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.5}
+
+/* ════════════════════════════════════════════════════
+   ABOUT PAGE
+════════════════════════════════════════════════════ */
+.about-page-hero{
+  padding:130px 0 60px;
+  background:var(--navy);
+  position:relative;overflow:hidden;
+}
+.about-page-hero::after{
+  content:'🇬🇧';position:absolute;right:6%;top:50%;transform:translateY(-50%);
+  font-size:18rem;opacity:.04;pointer-events:none;
+}
+.about-page-hero .section-title{color:var(--white)}
+.about-page-hero .section-lead{color:rgba(255,255,255,.55)}
+
+.about-story-section{background:var(--cream);padding:5.5rem 0}
+.about-story-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:5rem}
+.about-story-text p{font-size:1rem;color:var(--text-mid);line-height:1.95;margin-bottom:1.2rem}
+.story-quote{
+  margin:2rem 0;padding:1.2rem 1.5rem;
+  border-left:4px solid var(--red);background:var(--off-white);border-radius:0 4px 4px 0;
+  font-family:'Libre Baskerville',serif;font-style:italic;
+  font-size:1.05rem;color:var(--navy);line-height:1.7;
+}
+.about-sidebar{display:flex;flex-direction:column;gap:1.5rem}
+.sidebar-box{
+  background:var(--white);border:1px solid var(--stone);border-radius:6px;
+  padding:1.5rem;border-top:4px solid var(--red);
+}
+.sidebar-box-title{
+  font-family:'Libre Baskerville',serif;font-size:1rem;font-weight:700;
+  color:var(--navy);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem;
+}
+.sidebar-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.sidebar-list li{
+  font-size:.88rem;color:var(--text-mid);display:flex;align-items:baseline;gap:.5rem;
+  padding-bottom:.5rem;border-bottom:1px solid var(--warm-gray);
+}
+.sidebar-list li:last-child{border-bottom:none;padding-bottom:0}
+.sidebar-list li::before{content:'✦';color:var(--red);font-size:.55rem;flex-shrink:0;margin-top:2px}
+
+.owners-section{background:var(--off-white);padding:5rem 0}
+.owners-intro{max-width:700px;margin:0 auto 3rem;text-align:center}
+.owners-intro .section-title{text-align:center}
+.owners-intro .eyebrow{justify-content:center}
+.owners-intro .eyebrow::after{display:none}
+.owners-intro p{font-size:1rem;color:var(--text-muted);line-height:1.85;margin-top:.8rem}
+.owners-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.owner-card{
+  background:var(--white);border:1px solid var(--stone);border-radius:6px;
+  padding:2rem;text-align:center;
+}
+.owner-icon{font-size:2.8rem;margin-bottom:1rem}
+.owner-title{font-family:'Libre Baskerville',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
+.owner-desc{font-size:.85rem;color:var(--text-muted);line-height:1.7}
+
+/* ════════════════════════════════════════════════════
+   CONTACT PAGE
+════════════════════════════════════════════════════ */
+.contact-page-hero{padding:130px 0 60px;background:var(--navy)}
+.contact-page-hero .section-title{color:var(--white)}
+.contact-page-hero .section-lead{color:rgba(255,255,255,.55)}
+
+.contact-body{background:var(--cream);padding:5.5rem 0}
+.contact-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:5rem}
+
+.contact-details{display:flex;flex-direction:column;gap:1.8rem}
+.contact-block{}
+.contact-label{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:.4rem}
+.contact-val{font-family:'Libre Baskerville',serif;font-size:1.05rem;color:var(--navy);line-height:1.6}
+.contact-val a{color:var(--navy);transition:color .2s}
+.contact-val a:hover{color:var(--red)}
+.contact-val .phone-link{font-size:1.4rem;font-weight:700;color:var(--red);display:block}
+.contact-val .phone-link:hover{color:var(--red-dark)}
+
+.hours-contact-table{width:100%;border-collapse:collapse;margin-top:.4rem}
+.hours-contact-table tr{border-bottom:1px solid var(--warm-gray)}
+.hours-contact-table tr:last-child{border-bottom:none}
+.hours-contact-table td{padding:.65rem 0;font-size:.9rem;color:var(--text-mid)}
+.hours-contact-table td:last-child{text-align:right;font-weight:700;color:var(--navy)}
+.h-extended{color:var(--red)!important}
+
+.social-links{display:flex;gap:.7rem;margin-top:.5rem}
+.social-link{
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:var(--navy);color:var(--white);
+  font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  padding:.55rem 1rem;border-radius:3px;transition:background .2s;
+}
+.social-link:hover{background:var(--red)}
+
+.order-box{
+  background:var(--navy);border-radius:6px;padding:1.8rem;
+  margin-top:.5rem;
+}
+.order-box-title{font-family:'Libre Baskerville',serif;font-size:1.1rem;font-weight:700;color:var(--gold-light);margin-bottom:.4rem}
+.order-box-desc{font-size:.85rem;color:rgba(255,255,255,.55);margin-bottom:1.2rem;line-height:1.6}
+
+/* Contact form */
+.contact-form-card{
+  background:var(--white);border:1px solid var(--stone);border-radius:8px;
+  padding:2.5rem;border-top:4px solid var(--red);
+  box-shadow:0 4px 24px rgba(0,0,0,.06);
+}
+.form-h{font-family:'Libre Baskerville',serif;font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
+.form-sub{font-size:.88rem;color:var(--text-muted);margin-bottom:2rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{margin-bottom:1.1rem}
+.form-label{display:block;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-mid);margin-bottom:.4rem}
+.form-input,.form-select,.form-textarea{
+  width:100%;padding:.7rem .9rem;
+  border:1.5px solid var(--stone);border-radius:4px;
+  font-family:'Source Sans 3',sans-serif;font-size:.95rem;color:var(--text);
+  background:var(--cream);transition:border-color .2s;outline:none;
+}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--red);background:var(--white)}
+.form-textarea{resize:vertical;min-height:100px}
+.form-submit{
+  width:100%;padding:.9rem;margin-top:.4rem;
+  background:var(--red);color:var(--white);border:none;border-radius:4px;
+  font-family:'Source Sans 3',sans-serif;font-size:.8rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:background .2s;
+}
+.form-submit:hover{background:var(--red-dark)}
+
+/* Map */
+.map-section{height:350px;background:var(--warm-gray);position:relative;display:flex;align-items:center;justify-content:center}
+.map-embed{width:100%;height:100%;border:0}
+.map-fallback{text-align:center;padding:2rem}
+.map-fallback p{font-family:'Libre Baskerville',serif;font-size:1.1rem;color:var(--text-mid);margin-bottom:1rem}
+
+/* ─── FOOTER ──────────────────────────────────────── */
+footer{background:#071628;padding:4rem 0 2rem;border-top:4px solid var(--red)}
+.footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:4rem;margin-bottom:3rem}
+.footer-brand{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem}
+.footer-brand-name{font-family:'Libre Baskerville',serif;font-size:1.25rem;font-weight:700;color:var(--white)}
+.footer-brand-badge{
+  width:38px;height:38px;background:var(--red);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:1.2rem;
+  border:2px solid rgba(255,255,255,.15);flex-shrink:0;
+}
+.footer-tagline{font-family:'Libre Baskerville',serif;font-style:italic;font-size:.9rem;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:1.3rem}
+.footer-nav-title{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:1rem}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.footer-links li{font-size:.88rem;color:rgba(255,255,255,.5);cursor:pointer;transition:color .2s}
+.footer-links li:hover{color:var(--white)}
+.footer-contact-item{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.6;margin-bottom:.5rem}
+.footer-contact-item a{color:rgba(255,255,255,.7);transition:color .2s}
+.footer-contact-item a:hover{color:var(--white)}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.08);padding-top:1.8rem;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:.8rem;
+}
+.footer-bottom p{font-size:.75rem;color:rgba(255,255,255,.28)}
+.footer-seo{font-size:.72rem;color:rgba(255,255,255,.2);text-align:right}
+
+/* ─── REVEAL ──────────────────────────────────────── */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* ─── RESPONSIVE ──────────────────────────────────── */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:2.5rem;padding:3rem 1.5rem 4rem}
+  .hero-right{display:none}
+  .features-inner{grid-template-columns:repeat(2,1fr)}
+  .hours-grid,.about-teaser-grid,.about-story-grid,.contact-layout,.footer-grid{grid-template-columns:1fr;gap:2.5rem}
+  .menu-items-grid,.sides-grid{grid-template-columns:1fr}
+  .addons-grid{grid-template-columns:repeat(2,1fr)}
+  .bar-items-grid,.owners-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .menu-featured{grid-template-columns:1fr}
+  .menu-featured-visual{display:none}
+  .fries-band{grid-template-columns:auto 1fr;gap:1rem}
+  .fries-band .fries-style:nth-child(3){grid-column:2}
+  .bar-hero-card{flex-direction:column;gap:1rem}
+  .about-visual-stack{height:280px}
+  .footer-grid{gap:2rem}
+  .nav-phone{display:none}
+}
+@media(max-width:600px){
+  .hero-h1{font-size:2.2rem}
+  .features-inner{grid-template-columns:1fr 1fr}
+  .nav-links{gap:0}
+  .nav-links a{padding:.5rem .6rem;font-size:.7rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ NAV ══════════ -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-logo" onclick="showPage('home')" href="#" aria-label="Washington's Wharf home">
+      <div class="nav-logo-badge" aria-hidden="true">⚓</div>
+      <div class="nav-logo-text">
+        Washington's Wharf
+        <span>British Fish &amp; Chips · Cumming, GA</span>
+      </div>
+    </a>
+    <div class="nav-phone" aria-label="Call us">
+      📞 <a href="tel:4705332140" style="color:inherit">(470) 533-2140</a>
+    </div>
+    <ul class="nav-links" role="list">
+      <li><a onclick="showPage('home')" href="#" id="nl-home" class="active">Home</a></li>
+      <li><a onclick="showPage('menu')" href="#" id="nl-menu">Menu</a></li>
+      <li><a onclick="showPage('about')" href="#" id="nl-about">About</a></li>
+      <li><a onclick="showPage('contact')" href="#" id="nl-contact">Contact</a></li>
+      <li><a class="nav-order" href="https://orders.cake.net/11542916" target="_blank" rel="noopener">Order Online</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════
+     HOME PAGE
+══════════════════════════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Welcome to Washington's Wharf">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-tag">Authentic British Fish &amp; Chips in Cumming, GA</div>
+        <h1 class="hero-h1">
+          Proper Fish &amp; Chips,<br><em>Southern Heart.</em>
+        </h1>
+        <p class="hero-desc">
+          Cumming's favourite chippy — crispy beer-battered fish, generous portions, house-made tartar sauce, and a full bar. Right in Cumming City Center.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-red" onclick="showPage('menu')">See Our Menu</button>
+          <a class="btn btn-outline-white" href="https://orders.cake.net/11542916" target="_blank" rel="noopener">Order Online</a>
+        </div>
+        <a class="hero-phone-link" href="tel:4705332140">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call us: (470) 533-2140
+        </a>
+        <div class="hero-reviews" aria-label="Customer reviews">
+          <div class="review-pill"><span class="star-gold">★★★★★</span> "Best fish &amp; chips in the states"</div>
+          <div class="review-pill"><span class="star-gold">★★★★★</span> 4.8 stars · 52 reviews</div>
+        </div>
+      </div>
+      <div class="hero-right" aria-hidden="true">
+        <div class="food-hero-card">
+          <div class="food-photo-frame">
+            <div class="food-photo-emoji">🐟</div>
+            <div class="food-label-overlay">
+              <div class="food-label-title">Fish &amp; Chips</div>
+              <div class="food-label-sub">Beer-battered · Crispy · Golden</div>
+            </div>
+          </div>
+          <div class="food-card-footer">
+            <div>
+              <div class="food-card-tag">★ House Signature</div>
+              <div class="food-card-tag">Includes 1 sauce of your choice</div>
+            </div>
+            <div class="food-card-price">$16.95</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- FEATURES BAR -->
+  <div class="features-bar" role="region" aria-label="Quick info">
+    <div class="features-inner">
+      <div class="feature-cell">
+        <div class="feature-icon" aria-hidden="true">🐟</div>
+        <div class="feature-label">Specialty</div>
+        <div class="feature-val">British Fish &amp; Chips</div>
+      </div>
+      <div class="feature-cell">
+        <div class="feature-icon" aria-hidden="true">🍺</div>
+        <div class="feature-label">Bar</div>
+        <div class="feature-val">Full Bar Service</div>
+      </div>
+      <div class="feature-cell">
+        <div class="feature-icon" aria-hidden="true">🥡</div>
+        <div class="feature-label">Service</div>
+        <div class="feature-val">Dine In &amp; Takeout</div>
+      </div>
+      <div class="feature-cell">
+        <div class="feature-icon" aria-hidden="true">📍</div>
+        <div class="feature-label">Location</div>
+        <div class="feature-val">Cumming City Center</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOURS -->
+  <section class="hours-section" aria-label="Hours and location">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:3rem">
+        <div class="eyebrow" style="justify-content:center"><span>Hours &amp; Location</span></div>
+        <h2 class="section-title" style="text-align:center">Come Visit <em>The Wharf</em></h2>
+      </div>
+      <div class="hours-grid">
+        <div>
+          <div class="hours-table-wrap reveal">
+            <div class="hours-table-head"><span>Hours of Operation</span></div>
+            <div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time">11:30 AM – 7:00 PM</span></div>
+            <div class="hours-row"><span class="hours-day">Tuesday</span><span class="hours-time">11:30 AM – 7:00 PM</span></div>
+            <div class="hours-row"><span class="hours-day">Wednesday</span><span class="hours-time">11:30 AM – 7:00 PM</span></div>
+            <div class="hours-row"><span class="hours-day">Thursday</span><span class="hours-time">11:30 AM – 7:00 PM</span></div>
+            <div class="hours-row"><span class="hours-day">Friday</span><span class="hours-time extended">11:30 AM – 9:00 PM ★</span></div>
+            <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time extended">11:30 AM – 9:00 PM ★</span></div>
+            <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">11:30 AM – 7:00 PM</span></div>
+          </div>
+          <p style="font-size:.75rem;color:var(--text-muted);margin-top:.6rem;padding-left:.2rem">★ Extended hours Friday &amp; Saturday</p>
+        </div>
+        <div class="hours-cta-side reveal">
+          <div class="info-card">
+            <div class="info-card-label">📍 Address</div>
+            <div class="info-card-val">
+              451 Vision Dr, Suite H101<br>Cumming, GA 30040<br>
+              <a href="https://maps.google.com/?q=Washington%27s+Wharf+451+Vision+Dr+Cumming+GA" target="_blank" rel="noopener" style="font-size:.8rem;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.07em;margin-top:.4rem;display:inline-block">Get Directions →</a>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-label">📞 Phone</div>
+            <div class="info-card-val"><a href="tel:4705332140">(470) 533-2140</a></div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-label">🥡 Services</div>
+            <div class="info-card-val">Dine In · Takeout · Full Bar</div>
+          </div>
+          <a href="https://orders.cake.net/11542916" target="_blank" rel="noopener" class="btn btn-red" style="text-align:center;justify-content:center;width:100%">Order Online Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT TEASER -->
+  <section class="about-teaser" aria-label="About Washington's Wharf">
+    <div class="container">
+      <div class="about-teaser-grid">
+        <div class="about-visual-stack reveal" aria-hidden="true">
+          <div class="visual-card-main">
+            <div class="visual-card-main-inner">🐟</div>
+          </div>
+          <div class="visual-card-accent">
+            <div class="accent-card-num">4.8</div>
+            <div class="accent-card-label">Stars · 52 Reviews</div>
+          </div>
+          <div class="visual-badge">🇬🇧 Authentic British</div>
+        </div>
+        <div class="reveal">
+          <div class="eyebrow">Our Story</div>
+          <h2 class="section-title">Cumming's <em>Neighbourhood Chippy</em></h2>
+          <div class="about-text">
+            <p>Washington's Wharf is an authentic British fish and chips restaurant in the heart of Cumming City Center — the kind of place that feels like a local gem the moment you walk in.</p>
+            <p>Owned by Albert and Amanda Reeves, we set out to bring Cumming the best fish &amp; chips around: crispy beer-battered fish, two styles of fries, house-made tartar sauce, and a full bar with a warm pub feel.</p>
+          </div>
+          <div class="about-text-quotes">
+            <p>"Fish and chips just like in the UK. Very fresh fish, great batter and perfect chips. And they have pulled off a masterstroke in integrating a bar with many UK beers."</p>
+            <cite>— Paul L., verified review</cite>
+          </div>
+          <button class="btn btn-navy" onclick="showPage('about')">Our Full Story</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews-strip" aria-label="Customer reviews">
+    <div class="container">
+      <div class="eyebrow" style="color:var(--gold)">What Guests Are Saying</div>
+      <h2 class="section-title" style="color:var(--white)">Loved by <em style="color:var(--gold-light)">Cumming Locals</em></h2>
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"I fancy myself a fish and chips connoisseur, and this place is incredible. My wife and I go to the UK for a couple of weeks every year — this rivals any of the best I've ever had."</p>
+          <div class="review-author">Jason K.</div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"The fish was succulent and perfectly fried, fries were sizzling, and the shrimp was juicy and absolutely stunning! We had beers and cocktails and they were just as good as the food."</p>
+          <div class="review-author">Hailey T.</div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Better than Wright's — the tartar sauce is better flavour and consistency, and their fries and chips are both great. The fish is excellent! Crispy, large portion, cooked to perfection."</p>
+          <div class="review-author">Cameron</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <div class="cta-band">
+    <div class="container">
+      <h2>Ready for Proper Fish &amp; Chips?</h2>
+      <p>Dine in with us or order online for pickup — we're open 7 days a week.</p>
+      <div class="cta-band-actions">
+        <a href="https://orders.cake.net/11542916" target="_blank" rel="noopener"><button class="btn-white">Order Online</button></a>
+        <a href="tel:4705332140"><button class="btn-outline-white-red">📞 (470) 533-2140</button></a>
+        <button class="btn-outline-white-red" onclick="showPage('menu')">View Full Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <div class="footer-brand-badge" aria-hidden="true">⚓</div>
+            <div class="footer-brand-name">Washington's Wharf</div>
+          </div>
+          <p class="footer-tagline">"British Fish and Chips isn't just on our menu — it is our menu."</p>
+          <div class="social-links">
+            <a class="social-link" href="https://facebook.com/WashingtonsWharf" target="_blank" rel="noopener">🇫 Facebook</a>
+            <a class="social-link" href="https://orders.cake.net/11542916" target="_blank" rel="noopener">Order Online</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-nav-title">Explore</div>
+          <ul class="footer-links" role="list">
+            <li onclick="showPage('home')">Home</li>
+            <li onclick="showPage('menu')">Menu &amp; Prices</li>
+            <li onclick="showPage('about')">About Us</li>
+            <li onclick="showPage('contact')">Contact &amp; Directions</li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-nav-title">Find Us</div>
+          <p class="footer-contact-item">📍 451 Vision Dr, Suite H101<br>Cumming, GA 30040</p>
+          <p class="footer-contact-item">📞 <a href="tel:4705332140">(470) 533-2140</a></p>
+          <p class="footer-contact-item">🕐 Mon–Thu &amp; Sun: 11:30am–7pm<br>&nbsp;&nbsp;&nbsp;&nbsp; Fri–Sat: 11:30am–9pm</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Washington's Wharf · Cumming, GA · All rights reserved</p>
+        <p class="footer-seo">British fish and chips Cumming GA · Fish and chips restaurant Cumming Georgia</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     MENU PAGE
+══════════════════════════════════════════════════ -->
+<div id="page-menu" class="page">
+  <div class="menu-page-hero">
+    <div class="container">
+      <div class="eyebrow" style="justify-content:center;color:var(--gold)">Washington's Wharf · Cumming, GA</div>
+      <h1 class="section-title" style="color:var(--white);text-align:center;margin:0 auto 1rem">Our Full <em>Menu</em></h1>
+      <p class="section-lead" style="color:rgba(255,255,255,.55);text-align:center;margin:0 auto">Everything battered fresh to order. Choose American or British style fries with your meal.</p>
+    </div>
+  </div>
+
+  <div class="menu-body">
+    <div class="container">
+
+      <!-- Address strip -->
+      <div style="background:var(--off-white);border:1px solid var(--stone);border-radius:4px;padding:.8rem 1.2rem;margin-bottom:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem">
+        <span style="font-size:.82rem;color:var(--text-muted)">📍 451 Vision Dr, Suite H101, Cumming, GA 30040 &nbsp;·&nbsp; 📞 <a href="tel:4705332140" style="color:var(--red);font-weight:700">(470) 533-2140</a></span>
+        <a href="https://orders.cake.net/11542916" target="_blank" rel="noopener" class="btn btn-red" style="padding:.5rem 1.1rem;font-size:.72rem">Order Online →</a>
+      </div>
+
+      <!-- Tabs -->
+      <div class="menu-tabs" role="tablist">
+        <button class="tab-btn active" role="tab" aria-selected="true" onclick="switchTab('highseas',this)">🐟 The High Seas</button>
+        <button class="tab-btn" role="tab" aria-selected="false" onclick="switchTab('farmfare',this)">🍗 Farm Fare</button>
+        <button class="tab-btn" role="tab" aria-selected="false" onclick="switchTab('addons',this)">➕ Add-Ons</button>
+        <button class="tab-btn" role="tab" aria-selected="false" onclick="switchTab('bar',this)">🍺 Bar &amp; Drinks</button>
+      </div>
+
+      <!-- THE HIGH SEAS -->
+      <div id="tab-highseas" class="menu-section active">
+        <!-- Featured item -->
+        <div class="menu-featured reveal">
+          <div class="menu-featured-text">
+            <div class="eyebrow">⭐ House Signature</div>
+            <div class="menu-featured-name">Fish &amp; Chips</div>
+            <p class="menu-featured-desc">Our legendary hand-battered fish — crispy golden outside, flaky and tender inside. Served with your choice of American or British chips and one sauce. The dish that made Washington's Wharf a Cumming favourite.</p>
+            <div>
+              <div class="menu-featured-price">$16.95</div>
+              <div class="menu-featured-includes">Includes 1 sauce of your choice</div>
+            </div>
+          </div>
+          <div class="menu-featured-visual" aria-hidden="true">🐟</div>
+        </div>
+
+        <!-- Fries choice -->
+        <div class="fries-band">
+          <div class="fries-band-icon" aria-hidden="true">🍟</div>
+          <div class="fries-style">
+            <div class="fries-style-name">American Style</div>
+            <div class="fries-style-desc">Crispy, seasoned shoestring fries — golden and light</div>
+          </div>
+          <div class="fries-style">
+            <div class="fries-style-name">British Style</div>
+            <div class="fries-style-desc">Thick-cut chunky chips — soft inside, crisp outside, proper pub style</div>
+          </div>
+        </div>
+
+        <div class="menu-cat-header" style="margin-top:2rem">
+          <div class="menu-cat-desc">All seafood items served with your choice of American or British fries and one sauce</div>
+        </div>
+
+        <div class="menu-items-grid reveal">
+          <div class="menu-item-card">
+            <div class="item-info">
+              <div class="item-name">Fish &amp; Chips</div>
+              <div class="item-desc">Hand-battered fresh daily — crispy, golden, and generously portioned. The star of the show.</div>
+              <div class="item-sauce">Includes 1 sauce · Choose your fries style</div>
+            </div>
+            <div class="item-price">$16.95</div>
+          </div>
+          <div class="menu-item-card">
+            <div class="item-info">
+              <div class="item-name">Shrimp &amp; Chips <span style="font-size:.75rem;color:var(--text-muted)">(6 pcs)</span></div>
+              <div class="item-desc">Six golden battered shrimp with your choice of chips. Crispy and juicy with great dipping sauce.</div>
+              <div class="item-sauce">Includes 1 sauce · Choose your fries style</div>
+            </div>
+            <div class="item-price">$11.95</div>
+          </div>
+        </div>
+
+        <div class="menu-note">Sauce options: House-made tartar · Curry sauce · British gravy · Beer cheese. All fish is freshly battered per order. Please inform staff of any allergens.</div>
+      </div>
+
+      <!-- FARM FARE -->
+      <div id="tab-farmfare" class="menu-section">
+        <div class="menu-cat-header">
+          <div class="menu-cat-title">🍗 Farm Fare</div>
+          <div class="menu-cat-desc">Hand-breaded favourites and classic pub snacks</div>
+        </div>
+        <div class="menu-items-grid reveal">
+          <div class="menu-item-card">
+            <div class="item-info">
+              <div class="item-name">Chicken Tenders &amp; Fries</div>
+              <div class="item-desc">Hand-breaded chicken tenders with your choice of fries. Huge portions — customers rave about the texture and size.</div>
+              <div class="item-sauce">Honey Mustard · Ranch · Bleu Cheese</div>
+            </div>
+            <div class="item-price">$10.95</div>
+          </div>
+          <div class="menu-item-card">
+            <div class="item-info">
+              <div class="item-name">Chicken Wings <span style="font-size:.75rem;color:var(--text-muted)">(10 pcs)</span></div>
+              <div class="item-desc">Ten crispy wings your way, with celery or carrots and your choice of dip.</div>
+              <div class="item-sauce">Mild · Medium · Hot · Plain · Lemon Pepper · Ranch · Blue Cheese</div>
+            </div>
+            <div class="item-price">$12.95</div>
+          </div>
+          <div class="menu-item-card">
+            <div class="item-info">
+              <div class="item-name">Sweet Potato Tots</div>
+              <div class="item-desc">Golden sweet potato tots served with a unique cucumber wasabi sauce. A crowd-pleasing surprise.</div>
+            </div>
+            <div class="item-price">$7.95</div>
+          </div>
+          <div class="menu-item-card">
+            <div class="item-info">
+              <div class="item-name">Mozzarella Stix <span style="font-size:.75rem;color:var(--text-muted)">(6 pcs)</span></div>
+              <div class="item-desc">Six golden mozzarella sticks, crispy outside and perfectly melty inside.</div>
+            </div>
+            <div class="item-price">$7.95</div>
+          </div>
+          <div class="menu-item-card">
+            <div class="item-info">
+              <div class="item-name">Pretzel &amp; Beer Cheese</div>
+              <div class="item-desc">The must-try! Warm, soft and chewy pretzel with our house beer cheese dip. A guest favourite — don't miss it.</div>
+              <div class="item-sauce">⭐ Most Talked About Item</div>
+            </div>
+            <div class="item-price">$6.95</div>
+          </div>
+          <div class="menu-item-card">
+            <div class="item-info">
+              <div class="item-name">Chips or Fries Basket</div>
+              <div class="item-desc">A generous basket of either British-style chunky chips or American-style crispy fries. Great for sharing.</div>
+              <div class="item-sauce">Choose: American or British style</div>
+            </div>
+            <div class="item-price">$5.95</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ADD-ONS -->
+      <div id="tab-addons" class="menu-section">
+        <div class="menu-cat-header">
+          <div class="menu-cat-title">➕ Add-Ons &amp; Sauces</div>
+          <div class="menu-cat-desc">Make it proper British — add mushy peas, gravy, or our famous beer cheese</div>
+        </div>
+        <div class="menu-addons reveal">
+          <div class="menu-addons-title">🇬🇧 Classic British Add-Ons</div>
+          <div class="addons-grid">
+            <div class="addon-item">
+              <div class="addon-name">Mushy Peas</div>
+              <div class="addon-price">$2.50</div>
+            </div>
+            <div class="addon-item">
+              <div class="addon-name">Curry Sauce</div>
+              <div class="addon-price">$2.50</div>
+            </div>
+            <div class="addon-item">
+              <div class="addon-name">British Gravy</div>
+              <div class="addon-price">$2.50</div>
+            </div>
+            <div class="addon-item">
+              <div class="addon-name">Beer Cheese</div>
+              <div class="addon-price">$3.50</div>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--off-white);border:1px solid var(--stone);border-radius:6px;padding:1.5rem 2rem;margin-top:1.5rem">
+          <p style="font-family:'Libre Baskerville',serif;font-size:1rem;font-style:italic;color:var(--navy);margin-bottom:.4rem">House-Made Tartar Sauce</p>
+          <p style="font-size:.88rem;color:var(--text-muted)">Our signature tartar is included free with any fish or shrimp order. Guests consistently call it one of the best they've ever had.</p>
+        </div>
+        <div class="menu-note">Add-ons are available with any order. Ask your server for recommendations on pairing.</div>
+      </div>
+
+      <!-- BAR -->
+      <div id="tab-bar" class="menu-section">
+        <div class="bar-hero-card reveal">
+          <div class="bar-hero-icon" aria-hidden="true">🍺</div>
+          <div class="bar-hero-text">
+            <h3>Full Bar Service</h3>
+            <p>Washington's Wharf features a warm pub-style bar with a great selection of UK and domestic beers, cocktails, wine, and spirits. The perfect complement to your fish &amp; chips.</p>
+          </div>
+        </div>
+        <div class="bar-items-grid reveal">
+          <div class="bar-item">
+            <div class="bar-item-icon" aria-hidden="true">🍺</div>
+            <div class="bar-item-name">Draught &amp; Bottled Beer</div>
+            <div class="bar-item-desc">UK imports, domestic craft, and classic lagers on tap and in bottle</div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-item-icon" aria-hidden="true">🍸</div>
+            <div class="bar-item-name">Cocktails</div>
+            <div class="bar-item-desc">Classic and seasonal cocktails crafted to pair with your meal</div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-item-icon" aria-hidden="true">🍷</div>
+            <div class="bar-item-name">Wine &amp; Spirits</div>
+            <div class="bar-item-desc">Red, white, and rosé selections plus a full spirits menu</div>
+          </div>
+        </div>
+        <div class="menu-note" style="margin-top:2rem">Must be 21+ to consume alcoholic beverages. Please drink responsibly. Full bar menu available in-restaurant. 451 Vision Dr, Suite H101, Cumming, GA 30040 · (470) 533-2140</div>
+      </div>
+
+      <!-- Order CTA -->
+      <div style="text-align:center;margin-top:3.5rem;padding:2.5rem;background:var(--navy);border-radius:8px">
+        <p style="font-family:'Libre Baskerville',serif;font-size:1.3rem;color:var(--white);margin-bottom:.5rem">Ready to order?</p>
+        <p style="font-size:.9rem;color:rgba(255,255,255,.55);margin-bottom:1.5rem">Order online for pickup or give us a call — we're open 7 days a week.</p>
+        <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap">
+          <a href="https://orders.cake.net/11542916" target="_blank" rel="noopener" class="btn btn-red">Order Online</a>
+          <a href="tel:4705332140" class="btn btn-outline-white">📞 (470) 533-2140</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer repeated -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><div class="footer-brand-badge" aria-hidden="true">⚓</div><div class="footer-brand-name">Washington's Wharf</div></div>
+          <p class="footer-tagline">"British Fish and Chips isn't just on our menu — it is our menu."</p>
+          <div class="social-links"><a class="social-link" href="https://facebook.com/WashingtonsWharf" target="_blank" rel="noopener">Facebook</a><a class="social-link" href="https://orders.cake.net/11542916" target="_blank" rel="noopener">Order Online</a></div>
+        </div>
+        <div>
+          <div class="footer-nav-title">Explore</div>
+          <ul class="footer-links" role="list"><li onclick="showPage('home')">Home</li><li onclick="showPage('menu')">Menu</li><li onclick="showPage('about')">About Us</li><li onclick="showPage('contact')">Contact</li></ul>
+        </div>
+        <div>
+          <div class="footer-nav-title">Find Us</div>
+          <p class="footer-contact-item">📍 451 Vision Dr, Suite H101<br>Cumming, GA 30040</p>
+          <p class="footer-contact-item">📞 <a href="tel:4705332140">(470) 533-2140</a></p>
+          <p class="footer-contact-item">🕐 Mon–Thu &amp; Sun: 11:30am–7pm<br>&nbsp;&nbsp;&nbsp;&nbsp; Fri–Sat: 11:30am–9pm</p>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Washington's Wharf · Cumming, GA</p><p class="footer-seo">British fish and chips Cumming GA · fish and chips restaurant Cumming Georgia</p></div>
+    </div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     ABOUT PAGE
+══════════════════════════════════════════════════ -->
+<div id="page-about" class="page">
+  <div class="about-page-hero">
+    <div class="container">
+      <div class="eyebrow">Our Story</div>
+      <h1 class="section-title" style="color:var(--white);max-width:600px">The Heart Behind <em>Washington's Wharf</em></h1>
+      <p class="section-lead">A warm, lively British fish &amp; chips restaurant in the heart of Cumming, Georgia — where great food and good company are always on the menu.</p>
+    </div>
+  </div>
+
+  <section class="about-story-section">
+    <div class="container">
+      <div class="about-story-grid">
+        <div class="about-story-text reveal">
+          <div class="eyebrow">Who We Are</div>
+          <h2 class="section-title">Bringing Britain to <em>Georgia</em></h2>
+          <p>Washington's Wharf is an authentic British fish and chips restaurant nestled in Cumming City Center, opened by Albert and Amanda Reeves — a Gainesville couple with a passion for good food and community. The Reeves previously owned The Monkey Barrel restaurant on Gainesville Square and Washington Street Deli, so they know a thing or two about creating a great dining experience.</p>
+          <p>When the space formerly occupied by the beloved Wright's Fish &amp; Chips became available, the Reeves jumped at the chance to continue the tradition the community loved — while adding their own touch: a full pub-style bar, a warm welcoming atmosphere, and a commitment to making every plate the best it can be.</p>
+          <div class="story-quote">
+            "British Fish and Chips isn't just on our menu — it is our menu."
+          </div>
+          <p>Every piece of fish is hand-battered fresh to order. Every batch of chips is cooked properly — with your choice of American style (crispy, seasoned shoestrings) or British style (thick-cut, chunky, pub-perfect). And the house-made tartar sauce? Guests drive across town just for that.</p>
+          <p>Step through the door and you'll find a space that's warm, casual, and lively — 80s hits on the speakers, a cosy bar area, friendly staff, and tables full of happy locals. It's a neighbourhood gem, and Cumming has well and truly claimed it as its own.</p>
+          <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+            <button class="btn btn-red" onclick="showPage('menu')">See Our Menu</button>
+            <button class="btn btn-outline-navy" onclick="showPage('contact')">Find Us</button>
+          </div>
+        </div>
+        <div class="about-sidebar">
+          <div class="sidebar-box reveal">
+            <div class="sidebar-box-title">🐟 Known For</div>
+            <ul class="sidebar-list">
+              <li>Hand-battered, crispy fresh fish</li>
+              <li>Generous, satisfying portions</li>
+              <li>House-made tartar sauce</li>
+              <li>American &amp; British style fries</li>
+              <li>House-made pretzel &amp; beer cheese</li>
+              <li>Full pub-style bar</li>
+              <li>Warm, welcoming atmosphere</li>
+              <li>80s music &amp; lively energy</li>
+            </ul>
+          </div>
+          <div class="sidebar-box reveal">
+            <div class="sidebar-box-title">📍 Visit Us</div>
+            <ul class="sidebar-list">
+              <li>451 Vision Dr, Suite H101</li>
+              <li>Cumming, GA 30040</li>
+              <li>Cumming City Center</li>
+              <li><a href="tel:4705332140" style="color:var(--red);font-weight:700">(470) 533-2140</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-box reveal">
+            <div class="sidebar-box-title">🕐 Hours</div>
+            <ul class="sidebar-list">
+              <li>Mon – Thu: 11:30am – 7:00pm</li>
+              <li>Friday: 11:30am – 9:00pm</li>
+              <li>Saturday: 11:30am – 9:00pm</li>
+              <li>Sunday: 11:30am – 7:00pm</li>
+            </ul>
+          </div>
+          <div class="sidebar-box reveal" style="background:var(--navy);border-color:var(--navy)">
+            <div class="sidebar-box-title" style="color:var(--gold-light)">⭐ Guest Rating</div>
+            <div style="font-family:'Libre Baskerville',serif;font-size:3rem;font-weight:700;color:var(--gold);line-height:1">4.8</div>
+            <div style="font-size:.75rem;color:rgba(255,255,255,.5);letter-spacing:.08em;text-transform:uppercase;margin-top:.3rem">Out of 5 · 52 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="owners-section">
+    <div class="container">
+      <div class="owners-intro">
+        <div class="eyebrow" style="justify-content:center"></div>
+        <h2 class="section-title" style="text-align:center">Why <em>Washington's Wharf?</em></h2>
+        <p>We believe a great restaurant is built on three things: exceptional food, a welcoming space, and a genuine love of community. That's what we pour into every plate.</p>
+      </div>
+      <div class="owners-grid">
+        <div class="owner-card reveal">
+          <div class="owner-icon" aria-hidden="true">🐟</div>
+          <div class="owner-title">Quality, Every Time</div>
+          <div class="owner-desc">Fish battered fresh per order, house-made sauces, and nothing frozen or pre-made. You taste the difference immediately.</div>
+        </div>
+        <div class="owner-card reveal">
+          <div class="owner-icon" aria-hidden="true">🍺</div>
+          <div class="owner-title">The Pub Feel</div>
+          <div class="owner-desc">A proper bar with UK and domestic beers, cocktails, and wine. The kind of place you linger over a pint after your meal.</div>
+        </div>
+        <div class="owner-card reveal">
+          <div class="owner-icon" aria-hidden="true">🏘️</div>
+          <div class="owner-title">A Community Favourite</div>
+          <div class="owner-desc">We took over from Wright's — Cumming's beloved chippy — and we've worked hard to honour that legacy while making it our own.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><div class="footer-brand-badge" aria-hidden="true">⚓</div><div class="footer-brand-name">Washington's Wharf</div></div>
+          <p class="footer-tagline">"British Fish and Chips isn't just on our menu — it is our menu."</p>
+          <div class="social-links"><a class="social-link" href="https://facebook.com/WashingtonsWharf" target="_blank" rel="noopener">Facebook</a><a class="social-link" href="https://orders.cake.net/11542916" target="_blank" rel="noopener">Order Online</a></div>
+        </div>
+        <div>
+          <div class="footer-nav-title">Explore</div>
+          <ul class="footer-links" role="list"><li onclick="showPage('home')">Home</li><li onclick="showPage('menu')">Menu</li><li onclick="showPage('about')">About Us</li><li onclick="showPage('contact')">Contact</li></ul>
+        </div>
+        <div>
+          <div class="footer-nav-title">Find Us</div>
+          <p class="footer-contact-item">📍 451 Vision Dr, Suite H101<br>Cumming, GA 30040</p>
+          <p class="footer-contact-item">📞 <a href="tel:4705332140">(470) 533-2140</a></p>
+          <p class="footer-contact-item">🕐 Mon–Thu &amp; Sun: 11:30am–7pm<br>&nbsp;&nbsp;&nbsp;&nbsp; Fri–Sat: 11:30am–9pm</p>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Washington's Wharf · Cumming, GA</p><p class="footer-seo">British fish and chips Cumming GA · fish and chips restaurant Cumming Georgia</p></div>
+    </div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     CONTACT PAGE
+══════════════════════════════════════════════════ -->
+<div id="page-contact" class="page">
+  <div class="contact-page-hero">
+    <div class="container">
+      <div class="eyebrow">Get In Touch</div>
+      <h1 class="section-title" style="color:var(--white)">Come Find <em>The Wharf</em></h1>
+      <p class="section-lead">We're right in Cumming City Center. Walk in, call ahead, or order online — we're open 7 days a week.</p>
+    </div>
+  </div>
+
+  <section class="contact-body">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-details reveal">
+
+          <div class="contact-block">
+            <div class="contact-label">📞 Phone</div>
+            <div class="contact-val">
+              <a class="phone-link" href="tel:4705332140">(470) 533-2140</a>
+              <span style="font-size:.8rem;color:var(--text-muted);font-family:'Source Sans 3',sans-serif;font-weight:400;display:block;margin-top:.2rem">Tap to call on mobile</span>
+            </div>
+          </div>
+
+          <div class="contact-block">
+            <div class="contact-label">📍 Address</div>
+            <div class="contact-val">
+              451 Vision Dr, Suite H101<br>Cumming, GA 30040<br>
+              <span style="font-size:.85rem;color:var(--text-muted);font-family:'Source Sans 3',sans-serif;font-weight:400">Cumming City Center</span><br>
+              <a href="https://maps.google.com/?q=Washington%27s+Wharf+451+Vision+Dr+Cumming+GA" target="_blank" rel="noopener" style="font-size:.8rem;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.07em;margin-top:.5rem;display:inline-block">Open in Google Maps →</a>
+            </div>
+          </div>
+
+          <div class="contact-block">
+            <div class="contact-label">🕐 Hours of Operation</div>
+            <table class="hours-contact-table">
+              <tr><td>Monday</td><td>11:30 AM – 7:00 PM</td></tr>
+              <tr><td>Tuesday</td><td>11:30 AM – 7:00 PM</td></tr>
+              <tr><td>Wednesday</td><td>11:30 AM – 7:00 PM</td></tr>
+              <tr><td>Thursday</td><td>11:30 AM – 7:00 PM</td></tr>
+              <tr><td>Friday</td><td class="h-extended">11:30 AM – 9:00 PM</td></tr>
+              <tr><td>Saturday</td><td class="h-extended">11:30 AM – 9:00 PM</td></tr>
+              <tr><td>Sunday</td><td>11:30 AM – 7:00 PM</td></tr>
+            </table>
+          </div>
+
+          <div class="contact-block">
+            <div class="contact-label">🌐 Follow Us</div>
+            <div class="social-links">
+              <a class="social-link" href="https://facebook.com/WashingtonsWharf" target="_blank" rel="noopener">Facebook</a>
+            </div>
+          </div>
+
+          <div class="order-box">
+            <div class="order-box-title">Order Online</div>
+            <div class="order-box-desc">Skip the wait — order ahead for quick pickup. Open 7 days a week.</div>
+            <a href="https://orders.cake.net/11542916" target="_blank" rel="noopener" class="btn btn-red">Order Now →</a>
+          </div>
+        </div>
+
+        <div class="contact-form-card reveal">
+          <div class="form-h">Send Us a Message</div>
+          <div class="form-sub">Questions, feedback, or large group enquiries — we'd love to hear from you.</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="fname">First Name</label>
+              <input class="form-input" id="fname" type="text" placeholder="John" autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lname">Last Name</label>
+              <input class="form-input" id="lname" type="text" placeholder="Smith" autocomplete="family-name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input class="form-input" id="email" type="email" placeholder="john@email.com" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone (optional)</label>
+            <input class="form-input" id="phone" type="tel" placeholder="(470) 000-0000" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="subject">Subject</label>
+            <select class="form-select" id="subject">
+              <option>General Enquiry</option>
+              <option>Menu Question</option>
+              <option>Large Group / Party</option>
+              <option>Feedback</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-textarea" id="message" placeholder="What's on your mind? We'd love to hear from you..."></textarea>
+          </div>
+          <button class="form-submit" onclick="handleSubmit(this)">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <div class="map-section" aria-label="Location map">
+    <iframe
+      class="map-embed"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3299.208087624856!2d-84.1453885!3d34.2177048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f585fec76ff0e5%3A0xf15c43620e537ba0!2sWashington's%20Wharf!5e0!3m2!1sen!2s!4v1"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Washington's Wharf location map">
+    </iframe>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><div class="footer-brand-badge" aria-hidden="true">⚓</div><div class="footer-brand-name">Washington's Wharf</div></div>
+          <p class="footer-tagline">"British Fish and Chips isn't just on our menu — it is our menu."</p>
+          <div class="social-links"><a class="social-link" href="https://facebook.com/WashingtonsWharf" target="_blank" rel="noopener">Facebook</a><a class="social-link" href="https://orders.cake.net/11542916" target="_blank" rel="noopener">Order Online</a></div>
+        </div>
+        <div>
+          <div class="footer-nav-title">Explore</div>
+          <ul class="footer-links" role="list"><li onclick="showPage('home')">Home</li><li onclick="showPage('menu')">Menu</li><li onclick="showPage('about')">About Us</li><li onclick="showPage('contact')">Contact</li></ul>
+        </div>
+        <div>
+          <div class="footer-nav-title">Find Us</div>
+          <p class="footer-contact-item">📍 451 Vision Dr, Suite H101<br>Cumming, GA 30040</p>
+          <p class="footer-contact-item">📞 <a href="tel:4705332140">(470) 533-2140</a></p>
+          <p class="footer-contact-item">🕐 Mon–Thu &amp; Sun: 11:30am–7pm<br>&nbsp;&nbsp;&nbsp;&nbsp; Fri–Sat: 11:30am–9pm</p>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Washington's Wharf · 451 Vision Dr, Suite H101, Cumming, GA 30040 · (470) 533-2140</p><p class="footer-seo">British fish and chips Cumming GA · fish and chips restaurant Cumming Georgia · Washington's Wharf Cumming</p></div>
+    </div>
+  </footer>
+</div>
+
+<script>
+// ── Navigation ──────────────────────────────────────
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-links a[id^="nl-"]').forEach(a => a.classList.remove('active'));
+  document.getElementById('page-' + name).classList.add('active');
+  const nl = document.getElementById('nl-' + name);
+  if (nl) nl.classList.add('active');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+  setTimeout(initReveal, 120);
+}
+
+// ── Menu tabs ───────────────────────────────────────
+function switchTab(name, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+  document.querySelectorAll('.menu-section').forEach(s => s.classList.remove('active'));
+  btn.classList.add('active');
+  btn.setAttribute('aria-selected','true');
+  document.getElementById('tab-' + name).classList.add('active');
+}
+
+// ── Scroll reveal ───────────────────────────────────
+function initReveal() {
+  const els = document.querySelectorAll('.page.active .reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }});
+  }, {threshold: 0.12});
+  els.forEach(el => { el.classList.remove('in'); obs.observe(el); });
+}
+
+// Stagger reveals
+function staggerReveal() {
+  const els = document.querySelectorAll('.page.active .reveal');
+  els.forEach((el, i) => { el.style.transitionDelay = (i * 0.06) + 's'; });
+}
+
+// ── Nav scroll effect ────────────────────────────────
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// ── Form submit ──────────────────────────────────────
+function handleSubmit(btn) {
+  btn.textContent = '✓ Message Sent!';
+  btn.style.background = '#1b6b2f';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = 'Send Message';
+    btn.style.background = '';
+    btn.disabled = false;
+  }, 4000);
+}
+
+// ── Init ─────────────────────────────────────────────
+staggerReveal();
+initReveal();
+</script>
+</body>
+</html>
