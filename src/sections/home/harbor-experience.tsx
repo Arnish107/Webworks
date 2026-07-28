@@ -12,9 +12,9 @@ export function HarborExperienceSection() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
           <SectionHeading
-            eyebrow="Atmosphere"
-            title="The Harbor Experience"
-            description="Moments shaped by light, water, and unhurried hospitality."
+            eyebrow="The Experience"
+            title="Why Locals Keep Coming Back"
+            description="Crispy classics, friendly service, and a cozy spot in Cumming City Center."
             className="mb-16"
           />
         </Reveal>

@@ -54,7 +54,7 @@ export function PageLoader() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.6 }}
         >
-          Waterfront Dining
+          Fish & Chips
         </motion.p>
       </div>
     </motion.div>

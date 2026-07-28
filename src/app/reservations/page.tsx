@@ -49,8 +49,8 @@ export default function ReservationsPage() {
       <PageHero
         eyebrow="Reservations"
         title="Book Your Table"
-        description="Reserve waterfront seating for an evening of coastal cuisine and harbor views."
-        image="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1600&q=80"
+        description="Reserve a table for fish and chips, comfort classics, and a cold drink in Cumming City Center."
+        image="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1600&q=80"
       />
 
       <section className="py-16 md:py-24">

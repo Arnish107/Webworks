@@ -27,19 +27,19 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Waterfront Dining & Private Events`,
+    default: `${siteConfig.name} | Authentic Fish & Chips in Cumming, GA`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: [
     "Washington's Wharf",
-    "waterfront restaurant",
-    "seafood restaurant Alexandria",
-    "harbor dining",
-    "private events venue",
-    "wedding venue waterfront",
-    "reserve table marina",
-    "coastal fine dining",
+    "fish and chips Cumming",
+    "British fish and chips Georgia",
+    "Cumming City Center restaurants",
+    "seafood Cumming GA",
+    "best fish and chips Atlanta",
+    "pub food Cumming",
+    "Washington Wharf menu",
   ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
@@ -52,10 +52,10 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=80",
+        url: "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1200&q=80",
         width: 1200,
         height: 630,
-        alt: "Marina boats at Washington's Wharf",
+        alt: "Fish and chips from Washington's Wharf",
       },
     ],
   },
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} | ${siteConfig.tagline}`,
     description: siteConfig.description,
     images: [
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=80",
+      "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1200&q=80",
     ],
   },
   robots: {

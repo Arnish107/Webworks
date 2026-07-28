@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Private Events",
+  title: "Groups",
   description:
-    "Host weddings, corporate events, and private dining at Washington's Wharf, an elegant waterfront event venue with harbor views.",
+    "Plan birthdays, office lunches, family nights, and group takeout at Washington's Wharf in Cumming City Center.",
 };
 
 export default function PrivateEventsLayout({

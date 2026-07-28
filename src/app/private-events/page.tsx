@@ -10,17 +10,17 @@ import { Button } from "@/components/ui/button";
 
 export default function PrivateEventsPage() {
   const eventGallery = galleryImages.filter((g) =>
-    ["events", "weddings"].includes(g.category)
+    ["events", "dining", "food"].includes(g.category)
   );
 
   return (
     <>
       <PageHero
-        eyebrow="Celebrate"
-        title="Private Events on the Water"
-        description="From intimate rehearsals to grand waterfront weddings, spaces, cuisine, and service composed entirely for you."
-        image="https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&q=80"
-        cta={{ href: "/contact", label: "Plan Your Event" }}
+        eyebrow="Groups"
+        title="Bring the Whole Crew"
+        description="Birthdays, office lunches, family nights, and game-day orders. We make feeding a group easy."
+        image="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=80"
+        cta={{ href: "/contact", label: "Plan a Group Visit" }}
       />
 
       <section className="py-24 md:py-32">
@@ -28,8 +28,8 @@ export default function PrivateEventsPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Spaces"
-              title="Event Spaces"
-              description="Three distinctive settings, each framed by harbor light."
+              title="How to Gather Here"
+              description="Dine in, pull up to the bar, or call ahead for takeout."
               className="mb-14"
             />
           </Reveal>
@@ -68,9 +68,9 @@ export default function PrivateEventsPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading
-              eyebrow="Weddings"
-              title="Wedding Packages"
-              description="Ceremonies at golden hour, receptions under lantern light, and menus as memorable as the vows."
+              eyebrow="Easy Wins"
+              title="Popular Group Setups"
+              description="Tell us how many people you are feeding and we will help you put together baskets, sides, and drinks."
               className="mb-10 max-w-3xl"
             />
           </Reveal>
@@ -78,19 +78,19 @@ export default function PrivateEventsPage() {
             <ul className="grid gap-4 md:grid-cols-3">
               {[
                 {
-                  title: "Harbor Ceremony",
+                  title: "Family Night",
                   detail:
-                    "Terrace vows, floral styling consultation, and champagne welcome.",
+                    "Fish and chips, chicken tenders, tots, and soft drinks for the whole table.",
                 },
                 {
-                  title: "Reception Soirée",
+                  title: "Office Lunch",
                   detail:
-                    "Seated dinner or stations, open bar options, and dedicated event captain.",
+                    "A mix of fish, shrimp, wings, and pretzels that travels well for pickup.",
                 },
                 {
-                  title: "Full Weekend",
+                  title: "Game Day",
                   detail:
-                    "Rehearsal dinner, ceremony, reception, and preferred vendor guidance.",
+                    "Wings, baskets, chips, and cold beers ready when the crew arrives.",
                 },
               ].map((pkg) => (
                 <li
@@ -112,9 +112,9 @@ export default function PrivateEventsPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading
-              eyebrow="Business & Beyond"
-              title="Corporate & Private Dining"
-              description="Executive dinners, product launches, and milestone celebrations with discreet, polished service."
+              eyebrow="Occasions"
+              title="Built for Sharing"
+              description="Comfort food that works for almost any gathering."
               className="mb-12"
             />
           </Reveal>
@@ -145,12 +145,12 @@ export default function PrivateEventsPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Inspiration"
-              title="Event Gallery"
+              title="Group-Friendly Favorites"
               className="mb-12"
             />
           </Reveal>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {eventGallery.map((image, i) => (
+            {eventGallery.slice(0, 6).map((image, i) => (
               <Reveal key={image.id} delay={i * 0.05}>
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                   <Image
@@ -169,8 +169,8 @@ export default function PrivateEventsPage() {
 
       <section className="relative overflow-hidden py-28">
         <Image
-          src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1600&q=80"
-          alt="Evening reception by the water"
+          src="https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1600&q=80"
+          alt="Fish and chips ready for a group order"
           fill
           className="object-cover"
           sizes="100vw"
@@ -179,14 +179,14 @@ export default function PrivateEventsPage() {
         <div className="relative z-10 mx-auto max-w-3xl px-5 text-center md:px-8">
           <Reveal>
             <h2 className="font-display text-4xl text-ivory md:text-6xl">
-              Begin Your Celebration
+              Feeding a Crowd?
             </h2>
             <p className="mt-4 text-ivory/75">
-              Share your vision, our events team will craft the evening around
-              it.
+              Call ahead or send us a note and we will help you get the order
+              right.
             </p>
             <Button asChild size="lg" className="mt-8">
-              <Link href="/contact">Inquire Now</Link>
+              <Link href="/contact">Contact Us</Link>
             </Button>
           </Reveal>
         </div>

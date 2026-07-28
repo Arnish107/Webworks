@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Discover the story, philosophy, and waterfront heritage of Washington's Wharf, elegant coastal dining for over 25 years.",
+    "Learn about Washington's Wharf in Cumming City Center, home of authentic British-style fish and chips, comfort food, and good vibes.",
 };
 
 export default function AboutLayout({

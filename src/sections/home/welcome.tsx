@@ -13,8 +13,8 @@ export function WelcomeSection() {
         <Reveal>
           <ParallaxImage className="relative aspect-[4/5] rounded-[2rem] md:aspect-[5/6]">
             <Image
-              src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=1000&q=80"
-              alt="Elegant coastal restaurant dining room"
+              src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1000&q=80"
+              alt="Casual restaurant dining room with warm lighting"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
@@ -26,14 +26,14 @@ export function WelcomeSection() {
         <Reveal delay={0.15}>
           <SectionHeading
             eyebrow="Welcome"
-            title="A Harbor Haven for Discerning Guests"
-            description="Nestled along the water's edge, Washington's Wharf has long been a gathering place where coastal cuisine, gracious hospitality, and timeless marina views converge. From quiet weekday lunches to candlelit celebrations, every visit is composed with care."
+            title="Good Eats and Good Vibes in Cumming"
+            description="Washington's Wharf is your spot for authentic British-style fish and chips in Cumming City Center. Come for the crispy batter and flaky fish. Stay for the friendly service, cold pints, and easygoing atmosphere."
           />
           <p className="mt-6 max-w-lg text-sm leading-relaxed text-muted md:text-base">
-            Our kitchen celebrates the catch of the day, prime cuts, and seasonal
-            harvests, always plated with restraint and elegance. Step onto the
-            terrace, feel the breeze off the harbor, and settle into an evening
-            designed to linger.
+            Dig into classics like fish and chips, a golden shrimp basket, juicy
+            chicken tenders, and saucy wings. Kick things off with sweet potato
+            tots, cheese sticks, British chips with mushy peas, or a warm pretzel
+            with rich beer cheese.
           </p>
           <Button asChild className="mt-8" variant="outline">
             <Link href="/about">Our Story</Link>

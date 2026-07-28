@@ -29,8 +29,8 @@ export default function MenuPage() {
       <PageHero
         eyebrow="Cuisine"
         title="The Menu"
-        description="Coastal classics and seasonal plates, crafted with restraint, finished with elegance."
-        image="https://images.unsplash.com/photo-1579027989536-b7b1f875659b?w=1600&q=80"
+        description="British-style fish and chips, comfort classics, and bar favorites from Cumming City Center."
+        image="https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1600&q=80"
       />
 
       <section className="py-16 md:py-24">

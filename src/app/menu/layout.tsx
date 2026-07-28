@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Menu",
   description:
-    "Explore the Washington's Wharf menu, fresh seafood, prime steaks, craft cocktails, and an elegant wine list on the waterfront.",
+    "Explore the Washington's Wharf menu: fish and chips, shrimp baskets, chicken tenders, pretzels with beer cheese, wings, and cold drinks in Cumming, GA.",
   openGraph: {
     title: "Menu | Washington's Wharf",
     description:
-      "Coastal classics and seasonal plates crafted with restraint and elegance.",
+      "Crispy fish and chips, comfort classics, and bar favorites in Cumming City Center.",
   },
 };
 

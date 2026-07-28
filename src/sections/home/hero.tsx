@@ -24,14 +24,14 @@ export function HeroSection() {
     >
       <motion.div style={{ y }} className="absolute inset-0 scale-110">
         <Image
-          src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920&q=80"
-          alt="Sailboats docked along a waterfront marina"
+          src="https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1920&q=80"
+          alt="Crispy British-style fish and chips"
           fill
           priority
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/55 via-navy/45 to-navy" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/55 to-navy" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_40%,rgba(200,169,106,0.18),transparent_50%)]" />
       </motion.div>
 
@@ -59,7 +59,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.3 }}
         >
-          Washington&apos;s Wharf
+          Cumming City Center
         </motion.p>
         <motion.h1
           className="font-display max-w-4xl text-5xl leading-[1.05] tracking-wide text-ivory md:text-7xl lg:text-8xl text-balance"
@@ -67,7 +67,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
         >
-          Experience Waterfront Dining at Its Finest
+          Authentic Fish & Chips Done Right
         </motion.h1>
         <motion.p
           className="mt-6 max-w-xl text-base leading-relaxed text-ivory/80 md:text-lg"
@@ -75,8 +75,8 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.65 }}
         >
-          Fresh seafood, handcrafted cocktails, spectacular harbor views, and
-          unforgettable private events.
+          Crispy battered fish, golden chips, warm pretzels, cold beer, and good
+          vibes in the heart of Cumming, GA.
         </motion.p>
         <motion.div
           className="mt-10 flex flex-wrap gap-4"
@@ -85,10 +85,15 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.85 }}
         >
           <Button asChild size="lg">
-            <Link href="/reservations">Reserve a Table</Link>
+            <Link href="/menu">View the Menu</Link>
           </Button>
-          <Button asChild variant="outline" size="lg" className="border-ivory/35 text-ivory hover:border-gold hover:text-gold">
-            <Link href="/menu">Explore the Menu</Link>
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="border-ivory/35 text-ivory hover:border-gold hover:text-gold"
+          >
+            <Link href="/reservations">Reserve a Table</Link>
           </Button>
         </motion.div>
       </motion.div>

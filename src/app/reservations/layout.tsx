@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Reservations",
   description:
-    "Reserve a table at Washington's Wharf for waterfront dining in Alexandria. Book online or call for large parties.",
+    "Reserve a table at Washington's Wharf in Cumming, GA for authentic fish and chips, comfort food, and great drinks.",
   openGraph: {
     title: "Reserve a Table | Washington's Wharf",
     description:
-      "Book your waterfront dining experience, fresh seafood, harbor views, and refined hospitality.",
+      "Book your visit for crispy fish and chips in Cumming City Center.",
   },
 };
 

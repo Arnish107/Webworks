@@ -11,11 +11,9 @@ import type { GalleryCategory } from "@/types";
 const filters: { id: GalleryCategory; label: string }[] = [
   { id: "all", label: "All" },
   { id: "dining", label: "Dining" },
-  { id: "waterfront", label: "Waterfront" },
   { id: "food", label: "Food" },
-  { id: "cocktails", label: "Cocktails" },
-  { id: "events", label: "Events" },
-  { id: "weddings", label: "Weddings" },
+  { id: "cocktails", label: "Drinks" },
+  { id: "events", label: "Groups" },
 ];
 
 export default function GalleryPage() {
@@ -31,8 +29,8 @@ export default function GalleryPage() {
       <PageHero
         eyebrow="Visual Journal"
         title="Gallery"
-        description="Harbor light, plated beauty, and celebrations captured along the wharf."
-        image="https://images.unsplash.com/photo-1592861956120-e524fc739696?w=1600&q=80"
+        description="Crispy classics, cold drinks, and good vibes from our Cumming City Center kitchen."
+        image="https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1600&q=80"
       />
 
       <section className="py-16 md:py-24">

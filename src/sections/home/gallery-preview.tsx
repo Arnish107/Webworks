@@ -19,7 +19,7 @@ export function GalleryPreviewSection() {
             <SectionHeading
               eyebrow="Moments"
               title="Gallery"
-              description="A glimpse of life along the wharf, dining, celebrations, and harbor light."
+              description="A glimpse of crispy classics, cold drinks, and good vibes in Cumming."
             />
             <Button asChild variant="outline">
               <Link href="/gallery">View Gallery</Link>

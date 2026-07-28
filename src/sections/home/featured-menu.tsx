@@ -14,9 +14,9 @@ export function FeaturedMenuSection() {
         <Reveal>
           <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <SectionHeading
-              eyebrow="From the Kitchen"
-              title="Featured Menu"
-              description="A curated taste of the Wharf, refined plates and signature pours."
+              eyebrow="The Menu"
+              title="Guest Favorites"
+              description="A curated taste of the Wharf, from fish and chips to pretzel and beer cheese."
             />
             <Button asChild>
               <Link href="/menu">Full Menu</Link>

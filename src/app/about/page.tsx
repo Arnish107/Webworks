@@ -38,10 +38,10 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="Our Heritage"
-        title="A Timeless Waterfront Story"
-        description="For more than two decades, Washington's Wharf has welcomed guests to the edge of the harbor, where hospitality feels unhurried and every view is part of the menu."
-        image="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1600&q=80"
+        eyebrow="Our Story"
+        title="Fish & Chips with Heart"
+        description="Washington's Wharf brings authentic British-style fish and chips, comfort classics, and a welcoming bar to Cumming City Center."
+        image="https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1600&q=80"
       />
 
       <section className="py-24 md:py-32">
@@ -49,8 +49,8 @@ export default function AboutPage() {
           <Reveal>
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
               <Image
-                src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=1000&q=80"
-                alt="Historic waterfront dining atmosphere"
+                src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1000&q=80"
+                alt="Cozy restaurant atmosphere"
                 fill
                 sizes="50vw"
                 className="object-cover"
@@ -59,9 +59,9 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.12}>
             <SectionHeading
-              eyebrow="Our Story"
-              title="Rooted in Harbor Heritage"
-              description="Born from a passion for coastal dining and community gathering, Washington's Wharf grew from a beloved local table into a destination of relaxed luxury. We honor the marina's maritime spirit while offering a contemporary hospitality experience, refined, welcoming, and unmistakably of the water."
+              eyebrow="About Us"
+              title="A Cumming Favorite for Crispy Classics"
+              description="We are all about generous portions, crispy batter, flaky fish, and an easygoing room where friends and families feel at home. Guests come for the fish and chips and stay for the pretzel with beer cheese, the bar, and the friendly staff."
             />
           </Reveal>
         </div>
@@ -71,8 +71,8 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading
-              eyebrow="Philosophy"
-              title="How We Welcome You"
+              eyebrow="What Matters"
+              title="How We Do Things"
               align="center"
               className="mb-14"
             />
@@ -80,16 +80,16 @@ export default function AboutPage() {
           <div className="grid gap-6 md:grid-cols-3">
             {[
               {
-                title: "Fresh Ingredients",
-                text: "Day-boat seafood, seasonal produce, and carefully sourced meats, chosen for purity of flavor.",
+                title: "Crispy & Fresh",
+                text: "Fish fried to order, chips that stay golden, and sauces made to dunk every bite.",
               },
               {
-                title: "Exceptional Hospitality",
-                text: "Attentive without intrusion. Every guest should feel known, unhurried, and quietly celebrated.",
+                title: "Friendly Service",
+                text: "Fast, welcoming, and happy to help you find the perfect basket, side, or pint.",
               },
               {
-                title: "Beautiful Atmosphere",
-                text: "Soft light, harbor breezes, and spaces designed for conversation as much as cuisine.",
+                title: "Good Vibes",
+                text: "Casual seating, 80s hits, a solid bar, and a spot that feels great for lunch or dinner.",
               },
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 0.08}>
@@ -111,8 +111,8 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading
-              eyebrow="Why Guests Love Us"
-              title="By the Numbers"
+              eyebrow="By the Numbers"
+              title="Why Guests Love Us"
               align="center"
               className="mb-14"
             />
@@ -122,11 +122,7 @@ export default function AboutPage() {
             className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-6"
           >
             {stats.map((stat) => (
-              <div
-                key={stat.label}
-                data-stat
-                className="text-center"
-              >
+              <div key={stat.label} data-stat className="text-center">
                 <p className="font-display text-5xl text-gold md:text-6xl">
                   {stat.value}
                 </p>

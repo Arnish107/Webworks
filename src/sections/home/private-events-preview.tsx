@@ -14,12 +14,12 @@ export function PrivateEventsPreview() {
         <Reveal>
           <div className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
             <SectionHeading
-              eyebrow="Celebrate"
-              title="Private Events"
-              description="Weddings, corporate gatherings, and milestone evenings, composed with waterfront grace."
+              eyebrow="Gather"
+              title="Groups & Celebrations"
+              description="Birthdays, office lunches, family nights, and game-day orders made easy."
             />
             <Button asChild variant="outline">
-              <Link href="/private-events">Plan Your Event</Link>
+              <Link href="/private-events">Plan a Group Visit</Link>
             </Button>
           </div>
         </Reveal>

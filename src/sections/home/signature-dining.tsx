@@ -15,9 +15,9 @@ export function SignatureDiningSection() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
           <SectionHeading
-            eyebrow="Cuisine"
-            title="Signature Dining"
-            description="Six expressions of coastal hospitality, from the raw bar to the open patio."
+            eyebrow="Favorites"
+            title="What We're Known For"
+            description="Six crowd favorites, from crispy fish to pretzel and beer cheese."
             align="center"
             className="mb-14"
           />

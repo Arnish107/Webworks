@@ -31,8 +31,8 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Connect"
         title="Contact"
-        description="Questions, celebrations, or simply directions, we're here to help."
-        image="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=1600&q=80"
+        description="Questions about the menu, hours, parking, or group orders? We're happy to help."
+        image="https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1600&q=80"
       />
 
       <section className="py-16 md:py-24">
@@ -56,8 +56,8 @@ export default function ContactPage() {
               </InfoRow>
               <InfoRow icon={<Car className="h-5 w-5" />} title="Parking">
                 <p>
-                  Complimentary valet Friday-Sunday evenings. Self-park in the
-                  Harbor Lane garage adjacent to the restaurant.
+                  Free parking is available at Cumming City Center, including the
+                  nearby parking garage and street parking.
                 </p>
               </InfoRow>
               <InfoRow icon={<Phone className="h-5 w-5" />} title="Phone">

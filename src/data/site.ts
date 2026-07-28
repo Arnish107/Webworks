@@ -15,19 +15,19 @@
 
 export const siteConfig = {
   name: "Washington's Wharf",
-  tagline: "Waterfront Dining. Unforgettable Views.",
+  tagline: "Authentic Fish & Chips. Good Vibes.",
   description:
-    "Experience waterfront dining at its finest at Washington's Wharf - fresh seafood, handcrafted cocktails, spectacular harbor views, and unforgettable private events.",
+    "Washington's Wharf serves crispy British-style fish and chips, comfort classics, cold beer, and great vibes in Cumming City Center, Cumming, GA.",
   url: "https://washingtonswharf.com",
-  phone: "(555) 482-1901",
-  email: "reservations@washingtonswharf.com",
-  eventsEmail: "events@washingtonswharf.com",
+  phone: "(470) 533-2140",
+  email: "hello@washingtonswharf.com",
+  eventsEmail: "hello@washingtonswharf.com",
   address: {
-    street: "18 Harbor Lane",
-    city: "Alexandria",
-    state: "VA",
-    zip: "22314",
-    full: "18 Harbor Lane, Alexandria, VA 22314",
+    street: "451 Vision Dr, Ste H101",
+    city: "Cumming",
+    state: "GA",
+    zip: "30040",
+    full: "451 Vision Dr, Ste H101, Cumming, GA 30040",
   },
   social: {
     instagram: "https://instagram.com/washingtonswharf",
@@ -35,15 +35,15 @@ export const siteConfig = {
     twitter: "https://twitter.com/washingtonswharf",
   },
   coordinates: {
-    lat: 38.8048,
-    lng: -77.0469,
+    lat: 34.2206,
+    lng: -84.1378,
   },
 };
 
 export const navLinks: NavLink[] = [
   { href: "/", label: "Home" },
   { href: "/menu", label: "Menu" },
-  { href: "/private-events", label: "Private Events" },
+  { href: "/private-events", label: "Groups" },
   { href: "/about", label: "About" },
   { href: "/gallery", label: "Gallery" },
   { href: "/reservations", label: "Reservations" },
@@ -51,270 +51,269 @@ export const navLinks: NavLink[] = [
 ];
 
 export const hours: HoursBlock[] = [
-  { days: "Monday - Thursday", hours: "11:30 AM - 10:00 PM" },
-  { days: "Friday - Saturday", hours: "11:30 AM - 11:00 PM" },
-  { days: "Sunday", hours: "10:00 AM - 9:00 PM" },
-  { days: "Sunday Brunch", hours: "10:00 AM - 2:00 PM" },
+  { days: "Monday - Thursday", hours: "11:30 AM - 7:00 PM" },
+  { days: "Friday - Saturday", hours: "11:30 AM - 9:00 PM" },
+  { days: "Sunday", hours: "11:30 AM - 7:00 PM" },
 ];
 
 export const signatureDining: SignatureDining[] = [
   {
-    id: "seafood",
-    title: "Fresh Seafood",
+    id: "fish-chips",
+    title: "Fish & Chips",
     description:
-      "Harbor-caught oysters, day-boat scallops, and seasonal catch prepared with coastal elegance.",
+      "Crispy battered fish, flaky and tender, with golden chips made the British way.",
     image:
-      "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=800&q=80",
+      "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=800&q=80",
   },
   {
-    id: "steaks",
-    title: "Prime Steaks",
+    id: "shrimp",
+    title: "Shrimp Basket",
     description:
-      "Dry-aged cuts finished over open flame, served with harbor-side refinement.",
+      "A golden shrimp basket with your choice of sauce, from tartar to curry.",
     image:
-      "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800&q=80",
+      "https://images.unsplash.com/photo-1559742811-822873691df8?w=800&q=80",
   },
   {
-    id: "seasonal",
-    title: "Seasonal Specials",
+    id: "tenders",
+    title: "Chicken Tenders",
     description:
-      "A rotating tasting of the coast - ingredients at their peak, plated with intention.",
+      "Huge, juicy tenders that kids and grown-ups order again and again.",
     image:
-      "https://images.unsplash.com/photo-1579027989536-b7b1f875659b?w=800&q=80",
+      "https://images.unsplash.com/photo-1562967914-608f82629710?w=800&q=80",
   },
   {
-    id: "cocktails",
-    title: "Craft Cocktails",
+    id: "wings",
+    title: "Saucy Wings",
     description:
-      "Spirit-forward pours and botanical infusions inspired by marina evenings.",
+      "Wings that hit the spot, perfect for sharing with a cold pint.",
     image:
-      "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=80",
+      "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=800&q=80",
   },
   {
-    id: "brunch",
-    title: "Weekend Brunch",
+    id: "pretzel",
+    title: "Pretzel & Beer Cheese",
     description:
-      "Slow mornings, sparkling pours, and waterfront light spilling across the table.",
+      "Warm, soft pretzel with a slightly crisp exterior and rich beer cheese.",
     image:
-      "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=800&q=80",
+      "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=80",
   },
   {
-    id: "patio",
-    title: "Outdoor Patio Dining",
+    id: "bar",
+    title: "Beer & Cocktails",
     description:
-      "Open-air seating along the wharf - breeze, boats, and golden-hour ambiance.",
+      "A welcoming bar with UK beers, cocktails, and easygoing 80s hits.",
     image:
-      "https://images.unsplash.com/photo-1592861956120-e524fc739696?w=800&q=80",
+      "https://images.unsplash.com/photo-1436076863939-06870fe779c2?w=800&q=80",
   },
 ];
 
 export const harborExperiences: HarborExperience[] = [
   {
-    id: "views",
-    title: "Scenic Waterfront Views",
+    id: "classic",
+    title: "British-Style Classics",
     description:
-      "Floor-to-ceiling windows and open decks frame the marina in every season - sailboats at dawn, lantern light at dusk.",
+      "From fish and chips to mushy peas and gravy, we keep the comfort food comforting and the batter crisp.",
     image:
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=80",
+      "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1200&q=80",
   },
   {
-    id: "music",
-    title: "Live Music Evenings",
+    id: "vibes",
+    title: "Good Eats, Good Vibes",
     description:
-      "Intimate acoustic sets and jazz ensembles drift across the terrace on select evenings throughout the year.",
+      "Casual seating, friendly faces, and 80s hits that never get too loud. A cozy Cumming City Center favorite.",
     image:
-      "https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=1200&q=80",
+      "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200&q=80",
   },
   {
-    id: "sunset",
-    title: "Sunset Dining",
+    id: "bar",
+    title: "Bar Worth Lingering At",
     description:
-      "Reserve a waterfront table as the sky softens to rose and gold - an evening designed to linger.",
+      "Cold beer, solid cocktails, and UK pours that pair perfectly with a hot basket of chips.",
     image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80",
+      "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=1200&q=80",
   },
   {
-    id: "events",
-    title: "Seasonal Events",
+    id: "family",
+    title: "Made for Sharing",
     description:
-      "From oyster festivals to holiday soirees, our calendar celebrates the rhythm of the harbor.",
+      "Families, friends, solo lunchers, and groups all fit here. Counter-friendly, kid-friendly, and full of flavor.",
     image:
-      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1200&q=80",
+      "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=1200&q=80",
   },
 ];
 
 export const eventTypes: EventType[] = [
   {
-    id: "weddings",
-    title: "Weddings",
+    id: "birthdays",
+    title: "Birthday Gatherings",
     description:
-      "Exchange vows beside the water with candlelit receptions and tailored culinary journeys.",
-    image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=80",
-  },
-  {
-    id: "corporate",
-    title: "Corporate Events",
-    description:
-      "Executive dinners, product launches, and team celebrations in refined waterfront spaces.",
-    image:
-      "https://images.unsplash.com/photo-1511578314322-379afb476865?w=900&q=80",
-  },
-  {
-    id: "rehearsal",
-    title: "Rehearsal Dinners",
-    description:
-      "Intimate gatherings the night before - warm hospitality and unforgettable harbor light.",
-    image:
-      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80",
-  },
-  {
-    id: "birthday",
-    title: "Birthday Celebrations",
-    description:
-      "Milestone evenings crafted with custom menus, sparkling toasts, and private seating.",
+      "Bring the crew for baskets, beers, and an easy celebration without the fuss.",
     image:
       "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=900&q=80",
   },
   {
-    id: "holiday",
-    title: "Holiday Parties",
+    id: "office",
+    title: "Office Lunches",
     description:
-      "Festive soirees with seasonal cuisine, curated wine lists, and glowing marina views.",
+      "Feed the team with generous portions, fast service, and crowd-pleasing classics.",
     image:
-      "https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=900&q=80",
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80",
+  },
+  {
+    id: "game-day",
+    title: "Game Day Groups",
+    description:
+      "Wings, tenders, chips, and cold drinks for the whole squad.",
+    image:
+      "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=900&q=80",
+  },
+  {
+    id: "family",
+    title: "Family Nights",
+    description:
+      "High chairs, kid favorites, and comfort food everyone can agree on.",
+    image:
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80",
+  },
+  {
+    id: "takeout",
+    title: "Group Takeout",
+    description:
+      "Call ahead for larger orders and pick up hot, crispy favorites to go.",
+    image:
+      "https://images.unsplash.com/photo-1559742811-822873691df8?w=900&q=80",
   },
 ];
 
 export const featuredMenu: FeaturedMenuCard[] = [
   {
-    id: "oysters",
-    category: "Appetizers",
-    name: "East Coast Oysters",
-    description: "Half dozen on the half shell with mignonette & lemon.",
-    price: "$24",
+    id: "fish",
+    category: "Signature",
+    name: "Fish & Chips",
+    description: "Crispy battered fish with British-style chips.",
+    price: "$16.95",
     image:
-      "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=700&q=80",
-    details: "Chef's selection of local and regional oysters, chilled to order.",
+      "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=700&q=80",
+    details: "Generous portion, flaky fish, and a crisp golden batter.",
   },
   {
-    id: "lobster",
-    category: "Seafood",
-    name: "Butter-Poached Lobster",
-    description: "Maine lobster, saffron risotto, citrus beurre blanc.",
-    price: "$58",
+    id: "shrimp",
+    category: "Signature",
+    name: "Shrimp & Chips",
+    description: "Golden shrimp with chips and your choice of sauce.",
+    price: "$11.95",
     image:
-      "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=700&q=80",
-    details: "Sustainably sourced, finished tableside with warm herb butter.",
+      "https://images.unsplash.com/photo-1559742811-822873691df8?w=700&q=80",
+    details: "Try it with tartar or savory curry sauce.",
   },
   {
-    id: "ribeye",
-    category: "Steaks",
-    name: "Dry-Aged Ribeye",
-    description: "16oz bone-in, roasted bone marrow, red wine jus.",
-    price: "$72",
+    id: "pretzel",
+    category: "Starters",
+    name: "Pretzel & Beer Cheese",
+    description: "Warm soft pretzel with rich beer cheese.",
+    price: "$9.95",
     image:
-      "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=700&q=80",
-    details: "28-day dry-aged, grilled over hardwood charcoal.",
+      "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=700&q=80",
+    details: "A guest favorite: soft, chewy, and perfectly crisp outside.",
   },
   {
-    id: "souffle",
-    category: "Desserts",
-    name: "Harbor Chocolate Souffle",
-    description: "Valrhona dark chocolate, creme anglaise.",
-    price: "$16",
+    id: "tenders",
+    category: "Mains",
+    name: "Chicken Tenders",
+    description: "Huge tenders with your choice of dipping sauce.",
+    price: "$12.95",
     image:
-      "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=700&q=80",
-    details: "Baked to order - please allow twenty minutes.",
+      "https://images.unsplash.com/photo-1562967914-608f82629710?w=700&q=80",
+    details: "Crispy, filling, and always a hit with the kids.",
   },
   {
-    id: "marina",
-    category: "Cocktails",
-    name: "Marina Negroni",
-    description: "Barrel-aged gin, vermouth, bitter orange, smoked salt.",
-    price: "$18",
+    id: "beer",
+    category: "Drinks",
+    name: "UK Beers & Pints",
+    description: "A rotating selection of cold beers and pub pours.",
+    price: "From $6",
     image:
-      "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=700&q=80",
-    details: "Our signature stir - balanced, aromatic, and quietly bold.",
+      "https://images.unsplash.com/photo-1436076863939-06870fe779c2?w=700&q=80",
+    details: "Pair a pint with fish, wings, or pretzel and beer cheese.",
   },
 ];
 
 export const galleryImages: GalleryImage[] = [
   {
     id: "g1",
-    src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80",
-    alt: "Warm dining room overlooking the marina",
-    category: "dining",
+    src: "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=900&q=80",
+    alt: "Crispy fish and chips",
+    category: "food",
     span: "wide",
   },
   {
     id: "g2",
-    src: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=700&q=80",
-    alt: "Sailboats docked along the harbor",
-    category: "waterfront",
+    src: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=700&q=80",
+    alt: "Warm casual restaurant interior",
+    category: "dining",
     span: "tall",
   },
   {
     id: "g3",
-    src: "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=700&q=80",
-    alt: "Fresh oysters on ice",
+    src: "https://images.unsplash.com/photo-1559742811-822873691df8?w=700&q=80",
+    alt: "Golden fried shrimp",
     category: "food",
   },
   {
     id: "g4",
-    src: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=700&q=80",
-    alt: "Craft cocktail with citrus garnish",
+    src: "https://images.unsplash.com/photo-1436076863939-06870fe779c2?w=700&q=80",
+    alt: "Cold beer at the bar",
     category: "cocktails",
   },
   {
     id: "g5",
-    src: "https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=80",
-    alt: "Waterfront wedding celebration",
-    category: "weddings",
+    src: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=900&q=80",
+    alt: "Soft pretzel with dipping sauce",
+    category: "food",
     span: "wide",
   },
   {
     id: "g6",
-    src: "https://images.unsplash.com/photo-1579027989536-b7b1f875659b?w=700&q=80",
-    alt: "Chef plating fresh seafood",
+    src: "https://images.unsplash.com/photo-1562967914-608f82629710?w=700&q=80",
+    alt: "Crispy chicken tenders",
     category: "food",
     span: "tall",
   },
   {
     id: "g7",
-    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80",
-    alt: "Sunset over the water",
-    category: "waterfront",
+    src: "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=700&q=80",
+    alt: "Welcoming bar seating",
+    category: "dining",
   },
   {
     id: "g8",
-    src: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=700&q=80",
-    alt: "Private corporate dinner",
-    category: "events",
+    src: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=700&q=80",
+    alt: "Saucy chicken wings",
+    category: "food",
   },
   {
     id: "g9",
     src: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=700&q=80",
-    alt: "Elegant table setting",
+    alt: "Casual table setting",
     category: "dining",
   },
   {
     id: "g10",
-    src: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=700&q=80",
-    alt: "Wine and cocktail service",
+    src: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=700&q=80",
+    alt: "Cocktails ready to serve",
     category: "cocktails",
   },
   {
     id: "g11",
-    src: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=700&q=80",
-    alt: "Reception under string lights",
+    src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&q=80",
+    alt: "Friends dining together",
     category: "events",
     span: "wide",
   },
   {
     id: "g12",
-    src: "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=700&q=80",
-    alt: "Prime steak presentation",
+    src: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=700&q=80",
+    alt: "Thick-cut chips",
     category: "food",
   },
 ];
@@ -323,391 +322,306 @@ export const testimonials: Testimonial[] = [
   {
     id: "t1",
     quote:
-      "Every detail felt intentional - from the first oyster to the last pour as the sun slipped behind the masts.",
-    author: "Elena M.",
-    detail: "Anniversary Dinner",
+      "I fancy myself a fish and chips connoisseur, and this place is incredible. It rivals any of the best I've had in the UK.",
+    author: "Jason K.",
+    detail: "Regular Guest",
   },
   {
     id: "t2",
     quote:
-      "Our wedding reception on the terrace was pure magic. The staff anticipated every need before we asked.",
-    author: "James & Priya R.",
-    detail: "Waterfront Wedding",
+      "The fish was melt-in-your-mouth amazing. The pretzel was wonderful, and the staff made us feel right at home.",
+    author: "Hannah M.",
+    detail: "First-Time Guest",
   },
   {
     id: "t3",
     quote:
-      "The best harbor dining experience we've had. Impeccable seafood, quiet luxury, and views that stop conversation.",
-    author: "Marcus T.",
-    detail: "Weekend Brunch Guest",
+      "Fish and chips just like in the UK. Very fresh fish, great batter, perfect chips, and a bar with many UK beers.",
+    author: "Paul L.",
+    detail: "Local Favorite",
   },
   {
     id: "t4",
     quote:
-      "Washington's Wharf elevated our client dinner into something unforgettable. Flawless execution throughout.",
-    author: "Sophia K.",
-    detail: "Corporate Event",
+      "One of the best lunches we've had in years. The fish, fries, shrimp, beers, and cocktails were all fantastic.",
+    author: "Hailey T.",
+    detail: "Sunday Lunch",
   },
 ];
 
 export const stats: Stat[] = [
-  { value: "25+", label: "Years Serving Guests" },
-  { value: "1000+", label: "Private Events Hosted" },
   { value: "4.8★", label: "Guest Rating" },
-  { value: "365", label: "Days Open" },
+  { value: "50+", label: "5-Star Reviews" },
+  { value: "11:30", label: "Open Daily" },
+  { value: "1", label: "Mission: Great Fish & Chips" },
 ];
 
 export const eventSpaces: EventSpace[] = [
   {
-    id: "terrace",
-    name: "Harbor Terrace",
-    capacity: "Up to 120 guests",
+    id: "dining",
+    name: "Main Dining",
+    capacity: "Groups welcome",
     description:
-      "Open-air elegance with panoramic marina views - ideal for cocktail hours and sunset ceremonies.",
+      "Casual tables, comfortable seats, and room for friends, families, and small celebrations.",
     image:
-      "https://images.unsplash.com/photo-1592861956120-e524fc739696?w=1000&q=80",
+      "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1000&q=80",
   },
   {
-    id: "ballroom",
-    name: "Wharf Ballroom",
-    capacity: "Up to 200 guests",
+    id: "bar",
+    name: "Bar Area",
+    capacity: "Grab a seat",
     description:
-      "A luminous grand room with soaring windows, custom lighting, and full culinary service.",
+      "Settle in for a pint, a pretzel, and easy conversation by the bar.",
     image:
-      "https://images.unsplash.com/photo-1519167758481-83f29da8c2b0?w=1000&q=80",
+      "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=1000&q=80",
   },
   {
-    id: "private",
-    name: "Captain's Private Dining",
-    capacity: "8-24 guests",
+    id: "takeout",
+    name: "Takeout & Pickup",
+    capacity: "Call ahead",
     description:
-      "An intimate wood-paneled suite for celebrations that call for discretion and refined hospitality.",
+      "Order for the office, the game, or family night and pick it up hot and ready.",
     image:
-      "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=1000&q=80",
+      "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1000&q=80",
   },
 ];
 
 export const faqs: FaqItem[] = [
   {
-    question: "Do you offer valet parking?",
+    question: "Where are you located?",
     answer:
-      "Yes. Complimentary valet is available Friday through Sunday evenings, with self-parking in the adjacent Harbor Lane garage at all times.",
+      "We're in Cumming City Center at 451 Vision Dr, Suite H101, Cumming, GA 30040. Free parking is available nearby, including the parking garage.",
   },
   {
-    question: "What is your dress code?",
+    question: "Do you take reservations?",
     answer:
-      "We welcome smart casual attire. Jackets are optional; swimwear and athletic wear are kindly declined in the dining rooms.",
+      "Yes. We accept reservations. Call us at (470) 533-2140 or use the reservations form on this site.",
   },
   {
-    question: "Can you accommodate dietary restrictions?",
+    question: "Is there a bar?",
     answer:
-      "Absolutely. Please note allergies and preferences when reserving - our chefs craft thoughtful alternatives without compromising the experience.",
+      "Yes. We have a welcoming bar area with beer, cocktails, and wine to go with your fish and chips.",
   },
   {
-    question: "How far in advance should I book a private event?",
+    question: "Is the restaurant kid-friendly?",
     answer:
-      "We recommend 3-6 months for weddings and peak-season celebrations. Corporate and intimate gatherings can often be arranged with shorter notice.",
+      "Absolutely. We have high chairs, changing tables, and kid favorites like chicken tenders.",
   },
   {
-    question: "Is the patio dog-friendly?",
+    question: "Do you offer takeout?",
     answer:
-      "Well-behaved dogs are welcome on designated patio seating during daytime hours. Please request a pet-friendly table when booking.",
+      "Yes. Dine-in, takeaway, and delivery options are available. Call ahead for larger group orders.",
   },
 ];
 
 export const menuItems: MenuItem[] = [
   {
     id: "m1",
-    name: "East Coast Oysters",
-    description: "Half dozen, Champagne mignonette, lemon",
-    price: "$24",
+    name: "Pretzel & Beer Cheese",
+    description: "Warm soft pretzel with rich beer cheese",
+    price: "$9.95",
     category: "starters",
-    dietary: ["GF"],
     featured: true,
   },
   {
     id: "m2",
-    name: "Wharf Crab Cakes",
-    description: "Jumbo lump crab, Old Bay aioli, micro greens",
-    price: "$22",
+    name: "Mozzarella Sticks",
+    description: "Melty cheese sticks with marinara",
+    price: "$8.95",
     category: "starters",
   },
   {
     id: "m3",
-    name: "Tuna Tartare",
-    description: "Sesame, avocado, crispy wonton, yuzu",
-    price: "$21",
+    name: "Sweet Potato Tots",
+    description: "Crispy tots perfect for sharing",
+    price: "$7.95",
     category: "starters",
-    dietary: ["GF"],
   },
   {
     id: "m4",
-    name: "Burrata & Heirloom Tomato",
-    description: "Basil oil, aged balsamic, grilled sourdough",
-    price: "$18",
+    name: "British Chips & Mushy Peas",
+    description: "Thick-cut chips with classic mushy peas",
+    price: "$6.95",
     category: "starters",
-    dietary: ["V"],
   },
   {
     id: "m5",
-    name: "New England Clam Chowder",
-    description: "Applewood bacon, chives, oyster crackers",
-    price: "$14",
-    category: "soups-salads",
+    name: "Wings",
+    description: "Saucy wings made for sharing",
+    price: "$12.95",
+    category: "starters",
   },
   {
     id: "m6",
-    name: "Harbor Bisque",
-    description: "Lobster, brandy cream, chervil",
-    price: "$16",
+    name: "Side Salad",
+    description: "Fresh greens with house dressing",
+    price: "$5.95",
     category: "soups-salads",
-    dietary: ["GF"],
   },
   {
     id: "m7",
-    name: "Little Gem Caesar",
-    description: "Anchovy dressing, Parmigiano, sourdough crumb",
-    price: "$15",
-    category: "soups-salads",
+    name: "Fish & Chips",
+    description: "Crispy battered fish with British-style chips",
+    price: "$16.95",
+    category: "seafood",
+    featured: true,
   },
   {
     id: "m8",
-    name: "Citrus & Fennel Salad",
-    description: "Blood orange, toasted almonds, champagne vinaigrette",
-    price: "$16",
-    category: "soups-salads",
-    dietary: ["VG", "GF"],
+    name: "Shrimp & Chips",
+    description: "Golden shrimp, chips, and choice of sauce",
+    price: "$11.95",
+    category: "seafood",
+    featured: true,
   },
   {
     id: "m9",
-    name: "Butter-Poached Lobster",
-    description: "Saffron risotto, citrus beurre blanc",
-    price: "$58",
+    name: "Fish Bites",
+    description: "Smaller portion of crispy battered fish",
+    price: "$12.95",
     category: "seafood",
-    dietary: ["GF"],
-    featured: true,
   },
   {
     id: "m10",
-    name: "Pan-Seared Scallops",
-    description: "Cauliflower puree, brown butter, capers",
-    price: "$42",
-    category: "seafood",
-    dietary: ["GF"],
+    name: "Chicken Tenders",
+    description: "Huge crispy tenders with dipping sauce",
+    price: "$12.95",
+    category: "sandwiches",
+    featured: true,
   },
   {
     id: "m11",
-    name: "Grilled Branzino",
-    description: "Herb salsa verde, charred lemon, seasonal vegetables",
-    price: "$38",
-    category: "seafood",
-    dietary: ["GF"],
+    name: "Wing Basket",
+    description: "A fuller order of our saucy wings with chips",
+    price: "$14.95",
+    category: "sandwiches",
   },
   {
     id: "m12",
-    name: "Shrimp & Grits",
-    description: "Stone-ground grits, andouille, Creole butter",
-    price: "$34",
-    category: "seafood",
+    name: "Add Mushy Peas",
+    description: "Classic British side",
+    price: "$2.50",
+    category: "pasta",
   },
   {
     id: "m13",
-    name: "Dry-Aged Ribeye",
-    description: "16oz bone-in, roasted marrow, red wine jus",
-    price: "$72",
-    category: "steaks",
-    dietary: ["GF"],
-    featured: true,
+    name: "Add British Gravy",
+    description: "Rich gravy for dipping",
+    price: "$2.50",
+    category: "pasta",
   },
   {
     id: "m14",
-    name: "Filet Mignon",
-    description: "8oz center cut, bearnaise, grilled asparagus",
-    price: "$64",
-    category: "steaks",
-    dietary: ["GF"],
+    name: "Add Beer Cheese",
+    description: "Our crowd-favorite cheese dip",
+    price: "$3.00",
+    category: "pasta",
   },
   {
     id: "m15",
-    name: "NY Strip",
-    description: "14oz, peppercorn sauce, crispy shallots",
-    price: "$58",
-    category: "steaks",
-    dietary: ["GF"],
+    name: "Extra Tartar Sauce",
+    description: "House tartar on the side",
+    price: "$1.00",
+    category: "pasta",
   },
   {
     id: "m16",
-    name: "Lobster Linguine",
-    description: "Cherry tomato, chili flake, white wine",
-    price: "$44",
-    category: "pasta",
+    name: "Chocolate Brownie",
+    description: "Rich brownie for a sweet finish",
+    price: "$5.95",
+    category: "desserts",
   },
   {
     id: "m17",
-    name: "Wild Mushroom Tagliatelle",
-    description: "Truffle cream, thyme, aged pecorino",
-    price: "$32",
-    category: "pasta",
-    dietary: ["V"],
+    name: "Soft-Serve Cup",
+    description: "A simple cold treat after your chips",
+    price: "$3.95",
+    category: "desserts",
   },
   {
     id: "m18",
-    name: "Seafood Fra Diavolo",
-    description: "Mussels, shrimp, calamari, spicy tomato",
-    price: "$36",
-    category: "pasta",
+    name: "UK Draft Beer",
+    description: "Rotating British and craft pours",
+    price: "From $6",
+    category: "cocktails",
+    featured: true,
   },
   {
     id: "m19",
-    name: "Wharf Lobster Roll",
-    description: "Warm buttered bun, drawn butter, kettle chips",
-    price: "$32",
-    category: "sandwiches",
+    name: "House Cocktail",
+    description: "Easy-drinking cocktails from the bar",
+    price: "From $9",
+    category: "cocktails",
   },
   {
     id: "m20",
-    name: "Prime Burger",
-    description: "Aged cheddar, caramelized onion, house pickles",
-    price: "$24",
-    category: "sandwiches",
+    name: "Soft Drinks",
+    description: "Fountain favorites",
+    price: "$2.95",
+    category: "cocktails",
   },
   {
     id: "m21",
-    name: "Grilled Chicken Sandwich",
-    description: "Avocado, aioli, arugula, focaccia",
-    price: "$20",
-    category: "sandwiches",
+    name: "House White Wine",
+    description: "Chilled glass from the bar",
+    price: "$7",
+    category: "wine",
   },
   {
     id: "m22",
-    name: "Harbor Chocolate Souffle",
-    description: "Valrhona dark chocolate, creme anglaise",
-    price: "$16",
-    category: "desserts",
-    featured: true,
-  },
-  {
-    id: "m23",
-    name: "Lemon Olive Oil Cake",
-    description: "Berry compote, whipped mascarpone",
-    price: "$14",
-    category: "desserts",
-    dietary: ["V"],
-  },
-  {
-    id: "m24",
-    name: "Vanilla Bean Panna Cotta",
-    description: "Passion fruit, toasted coconut",
-    price: "$13",
-    category: "desserts",
-    dietary: ["GF"],
-  },
-  {
-    id: "m25",
-    name: "Marina Negroni",
-    description: "Barrel-aged gin, vermouth, bitter orange",
-    price: "$18",
-    category: "cocktails",
-    featured: true,
-  },
-  {
-    id: "m26",
-    name: "Sunset Spritz",
-    description: "Aperitivo, prosecco, blood orange, thyme",
-    price: "$16",
-    category: "cocktails",
-  },
-  {
-    id: "m27",
-    name: "Smoked Old Fashioned",
-    description: "Bourbon, demerara, cherry wood smoke",
-    price: "$18",
-    category: "cocktails",
-  },
-  {
-    id: "m28",
-    name: "Harbor Martini",
-    description: "Gin or vodka, dry vermouth, lemon oil",
-    price: "$17",
-    category: "cocktails",
-  },
-  {
-    id: "m29",
-    name: "Chablis Premier Cru",
-    description: "Burgundy, France - mineral, citrus, elegant finish",
-    price: "$78 / bottle",
-    category: "wine",
-  },
-  {
-    id: "m30",
-    name: "Sonoma Coast Pinot Noir",
-    description: "California - cherry, earth, silky tannins",
-    price: "$68 / bottle",
-    category: "wine",
-  },
-  {
-    id: "m31",
-    name: "Champagne Brut Reserve",
-    description: "France - fine mousse, brioche, orchard fruit",
-    price: "$95 / bottle",
-    category: "wine",
-  },
-  {
-    id: "m32",
-    name: "Napa Cabernet Sauvignon",
-    description: "California - cassis, cedar, polished structure",
-    price: "$110 / bottle",
+    name: "House Red Wine",
+    description: "Easy-sipping red by the glass",
+    price: "$7",
     category: "wine",
   },
 ];
 
 export const menuCategories: { id: MenuItem["category"]; label: string }[] = [
   { id: "starters", label: "Starters" },
-  { id: "soups-salads", label: "Soups & Salads" },
-  { id: "seafood", label: "Seafood" },
-  { id: "steaks", label: "Steaks" },
-  { id: "pasta", label: "Pasta" },
-  { id: "sandwiches", label: "Sandwiches" },
-  { id: "desserts", label: "Desserts" },
-  { id: "cocktails", label: "Cocktails" },
-  { id: "wine", label: "Wine List" },
+  { id: "soups-salads", label: "Salads" },
+  { id: "seafood", label: "Fish & Seafood" },
+  { id: "sandwiches", label: "Baskets & Mains" },
+  { id: "pasta", label: "Add-Ons" },
+  { id: "desserts", label: "Sweets" },
+  { id: "cocktails", label: "Drinks" },
+  { id: "wine", label: "Wine" },
 ];
 
 export const instagramPosts = [
   {
     id: "ig1",
     image:
-      "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=600&q=80",
-    caption: "Evening catch, plated with intention.",
+      "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=600&q=80",
+    caption: "Crispy fish, golden chips.",
   },
   {
     id: "ig2",
     image:
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-    caption: "Golden hour on the harbor.",
+      "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=80",
+    caption: "Pretzel and beer cheese, always.",
   },
   {
     id: "ig3",
     image:
-      "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&q=80",
-    caption: "A Marina Negroni to begin.",
+      "https://images.unsplash.com/photo-1436076863939-06870fe779c2?w=600&q=80",
+    caption: "Pints ready at the bar.",
   },
   {
     id: "ig4",
     image:
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80",
-    caption: "Tables dressed for the night.",
+      "https://images.unsplash.com/photo-1562967914-608f82629710?w=600&q=80",
+    caption: "Tenders for the whole table.",
   },
   {
     id: "ig5",
     image:
-      "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&q=80",
-    caption: "Prime cuts, open flame.",
+      "https://images.unsplash.com/photo-1559742811-822873691df8?w=600&q=80",
+    caption: "Shrimp basket, sorted.",
   },
   {
     id: "ig6",
     image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80",
-    caption: "Celebrations by the water.",
+      "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&q=80",
+    caption: "Good eats and good vibes.",
   },
 ];
