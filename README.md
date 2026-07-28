@@ -1,6 +1,6 @@
 # Washington's Wharf
 
-Premium waterfront restaurant & event venue website.
+Premium waterfront restaurant and event venue website.
 
 ## Stack
 
@@ -8,7 +8,7 @@ Premium waterfront restaurant & event venue website.
 - Tailwind CSS 4
 - Framer Motion + GSAP + Lenis
 - Shadcn-style UI primitives
-- Netlify-ready (`netlify.toml`)
+- Deployed on Vercel
 
 ## Getting Started
 
@@ -19,12 +19,26 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Deploy to Vercel
+
+1. Push this repo to GitHub
+2. Import the project at [vercel.com/new](https://vercel.com/new)
+3. Framework preset: **Next.js** (auto-detected)
+4. Click **Deploy**
+
+Or deploy from the CLI:
+
+```bash
+npm i -g vercel
+vercel
+```
+
 ## Scripts
 
-- `npm run dev` — local development
-- `npm run build` — production build
-- `npm start` — serve production build
-- `npm run lint` — ESLint
+- `npm run dev` - local development
+- `npm run build` - production build
+- `npm start` - serve production build
+- `npm run lint` - ESLint
 
 ## Pages
 
