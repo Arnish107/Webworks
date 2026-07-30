@@ -1,11 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Photo } from "@/components/ui/photo";
 import { FloatingLights } from "@/components/effects/motion";
+import { photos } from "@/data/images";
+import { siteConfig } from "@/data/site";
 
 export function HeroSection() {
   const ref = useRef<HTMLElement>(null);
@@ -23,13 +26,14 @@ export function HeroSection() {
       aria-label="Hero"
     >
       <motion.div style={{ y }} className="absolute inset-0 scale-110">
-        <Image
-          src="https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1920&q=80"
-          alt="Crispy British-style fish and chips"
+        <Photo
+          src={photos.hero}
+          alt="Fish and chips from Washington's Wharf in Cumming"
           fill
           priority
           sizes="100vw"
           className="object-cover"
+          slotLabel={photos.hero}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/55 to-navy" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_40%,rgba(200,169,106,0.18),transparent_50%)]" />
@@ -59,7 +63,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.3 }}
         >
-          Cumming City Center
+          Cumming City Center · Suite H101
         </motion.p>
         <motion.h1
           className="font-display max-w-4xl text-5xl leading-[1.05] tracking-wide text-ivory md:text-7xl lg:text-8xl text-balance"
@@ -67,7 +71,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
         >
-          Authentic Fish & Chips Done Right
+          Fish & chips that hold up to the UK trip
         </motion.h1>
         <motion.p
           className="mt-6 max-w-xl text-base leading-relaxed text-ivory/80 md:text-lg"
@@ -75,9 +79,27 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.65 }}
         >
-          Crispy battered fish, golden chips, warm pretzels, cold beer, and good
-          vibes in the heart of Cumming, GA.
+          Crispy battered fish, British chips, pretzel with beer cheese, and UK
+          beers on Vision Drive. Open daily from 11:30.
         </motion.p>
+        <motion.div
+          className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-ivory/70"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.75 }}
+        >
+          <span className="inline-flex items-center gap-2">
+            <MapPin className="h-4 w-4 text-gold" aria-hidden />
+            {siteConfig.address.street}
+          </span>
+          <a
+            href={`tel:${siteConfig.phone}`}
+            className="inline-flex items-center gap-2 transition-colors hover:text-gold"
+          >
+            <Phone className="h-4 w-4 text-gold" aria-hidden />
+            {siteConfig.phone}
+          </a>
+        </motion.div>
         <motion.div
           className="mt-10 flex flex-wrap gap-4"
           initial={{ opacity: 0, y: 16 }}
@@ -85,7 +107,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.85 }}
         >
           <Button asChild size="lg">
-            <Link href="/menu">View the Menu</Link>
+            <Link href="/menu">See the menu</Link>
           </Button>
           <Button
             asChild
@@ -93,7 +115,7 @@ export function HeroSection() {
             size="lg"
             className="border-ivory/35 text-ivory hover:border-gold hover:text-gold"
           >
-            <Link href="/reservations">Reserve a Table</Link>
+            <Link href="/reservations">Reserve a table</Link>
           </Button>
         </motion.div>
       </motion.div>

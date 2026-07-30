@@ -1,11 +1,16 @@
 "use client";
 
-import Image from "next/image";
 import { instagramPosts, siteConfig } from "@/data/site";
 import { Reveal } from "@/components/effects/motion";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { InstagramIcon } from "@/components/ui/social-icons";
+import { Photo } from "@/components/ui/photo";
 
+/**
+ * Hardcoded IG preview until a Meta Graph API token or embed is wired.
+ * Captions are unique on purpose (the old duplicate text came from aria-label + visible caption).
+ * Swap images under /public/images/instagram with exports from @washingtonswharf.
+ */
 export function InstagramSection() {
   return (
     <section className="relative py-24 md:py-32">
@@ -13,9 +18,9 @@ export function InstagramSection() {
         <Reveal>
           <div className="mb-12 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
             <SectionHeading
-              eyebrow="Social"
-              title="Along the Wharf"
-              description="Follow the seasons, plates, and celebrations."
+              eyebrow="@washingtonswharf"
+              title="What we post when the fryer is busy"
+              description="Preview tiles only. For live photos, follow the Instagram account. Drop real exports into /images/instagram to replace placeholders."
             />
             <a
               href={siteConfig.social.instagram}
@@ -24,7 +29,7 @@ export function InstagramSection() {
               className="focus-ring inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-gold transition-colors hover:text-sand"
             >
               <InstagramIcon className="h-4 w-4" />
-              @washingtonswharf
+              Open Instagram
             </a>
           </div>
         </Reveal>
@@ -37,20 +42,21 @@ export function InstagramSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative block aspect-square overflow-hidden rounded-2xl"
-                aria-label={post.caption}
               >
-                <Image
+                <Photo
                   src={post.image}
-                  alt={post.caption}
+                  alt=""
                   fill
                   sizes="(max-width: 768px) 50vw, 16vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  slotLabel={post.image}
                 />
-                <div className="absolute inset-0 flex items-end bg-navy/0 p-4 opacity-0 transition-all duration-500 group-hover:bg-navy/55 group-hover:opacity-100">
+                <div className="absolute inset-0 flex items-end bg-gradient-to-t from-navy/80 via-navy/20 to-transparent p-3 opacity-100 md:opacity-0 md:transition-opacity md:duration-500 md:group-hover:opacity-100">
                   <p className="text-xs leading-relaxed text-ivory">
                     {post.caption}
                   </p>
                 </div>
+                <span className="sr-only">{post.caption}</span>
               </a>
             </Reveal>
           ))}

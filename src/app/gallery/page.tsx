@@ -1,12 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { photos } from "@/data/images";
 import { galleryImages } from "@/data/site";
 import { PageHero } from "@/components/layout/page-hero";
 import { cn } from "@/lib/utils";
 import type { GalleryCategory } from "@/types";
+import { Photo } from "@/components/ui/photo";
 
 const filters: { id: GalleryCategory; label: string }[] = [
   { id: "all", label: "All" },
@@ -27,10 +28,10 @@ export default function GalleryPage() {
   return (
     <>
       <PageHero
-        eyebrow="Visual Journal"
-        title="Gallery"
-        description="Crispy classics, cold drinks, and good vibes from our Cumming City Center kitchen."
-        image="https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1600&q=80"
+        eyebrow="Gallery"
+        title="Plates, pints, and the room"
+        description="Every tile points at a local file under /public/images/gallery. Replace the placeholders with shots from H101."
+        image={photos.diningRoom}
       />
 
       <section className="py-16 md:py-24">
@@ -81,12 +82,13 @@ export default function GalleryPage() {
                           : "aspect-square"
                     )}
                   >
-                    <Image
+                    <Photo
                       src={image.src}
                       alt={image.alt}
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      slotLabel={image.src}
                     />
                     <div className="absolute inset-0 bg-navy/0 transition-colors duration-500 group-hover:bg-navy/25" />
                     <figcaption className="absolute inset-x-0 bottom-0 translate-y-2 p-4 text-sm text-ivory opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">

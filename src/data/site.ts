@@ -12,13 +12,35 @@
   Stat,
   Testimonial,
 } from "@/types";
+import { photos } from "@/data/images";
+
+/**
+ * CONTENT ACCURACY NOTES (confirm before launch)
+ * CONFIRMED:
+ * - Name, Cumming City Center location, Suite H101 address
+ * - Phone (470) 533-2140
+ * - Hours Mon-Thu/Sun 11:30-7, Fri-Sat 11:30-9
+ * - Fish & Chips $16.95, Shrimp & Chips $11.95 (from published guest writeups)
+ * - Menu items exist: pretzel + beer cheese, tenders, wings, tots, cheese sticks, mushy peas, gravy, bar
+ * - Instagram @washingtonswharf
+ * - Reviews paraphrased from public Google/Grubbio guest reviews
+ *
+ * UNVERIFIED / PLACEHOLDER (do not treat as final):
+ * - Email hello@washingtonswharf.com (no public confirmation found)
+ * - Facebook / X profile URLs
+ * - Prices other than fish ($16.95) and shrimp ($11.95)
+ * - Desserts / wine glass prices
+ * - Exact "Fish Bites" / "Wing Basket" naming
+ * - Private dining room (none confirmed; groups = call-ahead + dining room)
+ */
 
 export const siteConfig = {
   name: "Washington's Wharf",
-  tagline: "Authentic Fish & Chips. Good Vibes.",
+  tagline: "British fish & chips in Cumming City Center.",
   description:
-    "Washington's Wharf serves crispy British-style fish and chips, comfort classics, cold beer, and great vibes in Cumming City Center, Cumming, GA.",
+    "Washington's Wharf is a fish and chips spot in Cumming City Center with crispy battered fish, British chips, pretzel and beer cheese, UK beers, and a casual bar. 451 Vision Dr, Ste H101, Cumming, GA.",
   url: "https://washingtonswharf.com",
+  // TODO: confirm this email with ownership before launch
   phone: "(470) 533-2140",
   email: "hello@washingtonswharf.com",
   eventsEmail: "hello@washingtonswharf.com",
@@ -30,8 +52,9 @@ export const siteConfig = {
     full: "451 Vision Dr, Ste H101, Cumming, GA 30040",
   },
   social: {
-    instagram: "https://instagram.com/washingtonswharf",
-    facebook: "https://facebook.com/washingtonswharf",
+    instagram: "https://www.instagram.com/washingtonswharf/",
+    // TODO: confirm Facebook / X handles before promoting
+    facebook: "https://www.facebook.com/washingtonswharf",
     twitter: "https://twitter.com/washingtonswharf",
   },
   coordinates: {
@@ -61,127 +84,112 @@ export const signatureDining: SignatureDining[] = [
     id: "fish-chips",
     title: "Fish & Chips",
     description:
-      "Crispy battered fish, flaky and tender, with golden chips made the British way.",
-    image:
-      "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=800&q=80",
+      "The plate people drive across town for. Fresh white fish, crisp batter, and chips that still taste British.",
+    image: photos.fishAndChips,
   },
   {
     id: "shrimp",
-    title: "Shrimp Basket",
+    title: "Shrimp & Chips",
     description:
-      "A golden shrimp basket with your choice of sauce, from tartar to curry.",
-    image:
-      "https://images.unsplash.com/photo-1559742811-822873691df8?w=800&q=80",
+      "Golden shrimp with chips and your pick of tartar or curry sauce.",
+    image: photos.shrimpAndChips,
   },
   {
     id: "tenders",
     title: "Chicken Tenders",
     description:
-      "Huge, juicy tenders that kids and grown-ups order again and again.",
-    image:
-      "https://images.unsplash.com/photo-1562967914-608f82629710?w=800&q=80",
+      "Huge tenders. Parents order them for the kids, then finish half the basket themselves.",
+    image: photos.chickenTenders,
   },
   {
     id: "wings",
-    title: "Saucy Wings",
+    title: "Wings",
     description:
-      "Wings that hit the spot, perfect for sharing with a cold pint.",
-    image:
-      "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=800&q=80",
+      "Saucy wings for sharing while you wait on another round of chips.",
+    image: photos.wings,
   },
   {
     id: "pretzel",
     title: "Pretzel & Beer Cheese",
     description:
-      "Warm, soft pretzel with a slightly crisp exterior and rich beer cheese.",
-    image:
-      "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=80",
+      "Soft, chewy pretzel with a crisp edge. Guests call the beer cheese the best bite in the building.",
+    image: photos.pretzelBeerCheese,
   },
   {
     id: "bar",
-    title: "Beer & Cocktails",
+    title: "UK Beers & Bar",
     description:
-      "A welcoming bar with UK beers, cocktails, and easygoing 80s hits.",
-    image:
-      "https://images.unsplash.com/photo-1436076863939-06870fe779c2?w=800&q=80",
+      "A proper bar tucked into the room, with UK pours and cocktails that actually go with fried fish.",
+    image: photos.ukBeers,
   },
 ];
 
 export const harborExperiences: HarborExperience[] = [
   {
     id: "classic",
-    title: "British-Style Classics",
+    title: "Batter that holds up to UK comparisons",
     description:
-      "From fish and chips to mushy peas and gravy, we keep the comfort food comforting and the batter crisp.",
-    image:
-      "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1200&q=80",
+      "Guests who eat fish and chips in Britain keep saying this plate holds its own. Flaky fish, crisp batter, and chips worth arguing about (British cut vs American fries).",
+    image: photos.fishAndChips,
   },
   {
     id: "vibes",
-    title: "Good Eats, Good Vibes",
+    title: "80s hits, not dinner-party jazz",
     description:
-      "Casual seating, friendly faces, and 80s hits that never get too loud. A cozy Cumming City Center favorite.",
-    image:
-      "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200&q=80",
+      "The room plays 80s tracks at a volume you can still talk over. Counter service, comfortable seats, and a phone booth that always gets a comment.",
+    image: photos.diningRoom,
   },
   {
     id: "bar",
-    title: "Bar Worth Lingering At",
+    title: "A bar that belongs with the food",
     description:
-      "Cold beer, solid cocktails, and UK pours that pair perfectly with a hot basket of chips.",
-    image:
-      "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=1200&q=80",
+      "UK beers on draft, cocktails, and wine by the glass. Sit at the bar for a pint and pretzel, or pull a table for the full basket.",
+    image: photos.bar,
   },
   {
-    id: "family",
-    title: "Made for Sharing",
+    id: "center",
+    title: "Right in Cumming City Center",
     description:
-      "Families, friends, solo lunchers, and groups all fit here. Counter-friendly, kid-friendly, and full of flavor.",
-    image:
-      "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=1200&q=80",
+      "Suite H101 on Vision Drive, by the amphitheatre and the parking garage. Easy walk from free parking, open daily from 11:30.",
+    image: photos.gallery[11],
   },
 ];
 
 export const eventTypes: EventType[] = [
   {
     id: "birthdays",
-    title: "Birthday Gatherings",
+    title: "Birthday tables",
     description:
-      "Bring the crew for baskets, beers, and an easy celebration without the fuss.",
-    image:
-      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=900&q=80",
+      "We are not a banquet hall. We are a great place to plant 8 to 12 people on baskets, tenders, wings, and pints.",
+    image: photos.groups.birthday,
   },
   {
     id: "office",
-    title: "Office Lunches",
+    title: "Office pickup orders",
     description:
-      "Feed the team with generous portions, fast service, and crowd-pleasing classics.",
-    image:
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80",
+      "Call ahead for a mixed takeout run: fish, shrimp, pretzels, and tenders. Hot food, fast handoff.",
+    image: photos.groups.office,
   },
   {
     id: "game-day",
-    title: "Game Day Groups",
+    title: "Game-day takeout",
     description:
-      "Wings, tenders, chips, and cold drinks for the whole squad.",
-    image:
-      "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=900&q=80",
+      "Wings, chips, and cold drinks staged for pickup before kickoff. Tell us your headcount when you call.",
+    image: photos.groups.gameDay,
   },
   {
     id: "family",
-    title: "Family Nights",
+    title: "Family dinners",
     description:
-      "High chairs, kid favorites, and comfort food everyone can agree on.",
-    image:
-      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80",
+      "High chairs, kid-sized appetites met with giant tenders, and enough sides that nobody leaves hungry.",
+    image: photos.groups.family,
   },
   {
     id: "takeout",
-    title: "Group Takeout",
+    title: "Large takeout runs",
     description:
-      "Call ahead for larger orders and pick up hot, crispy favorites to go.",
-    image:
-      "https://images.unsplash.com/photo-1559742811-822873691df8?w=900&q=80",
+      "No private event kitchen on site. For bigger groups, we build the order for pickup. Call (470) 533-2140.",
+    image: photos.groups.takeout,
   },
 ];
 
@@ -192,197 +200,207 @@ export const featuredMenu: FeaturedMenuCard[] = [
     name: "Fish & Chips",
     description: "Crispy battered fish with British-style chips.",
     price: "$16.95",
-    image:
-      "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=700&q=80",
-    details: "Generous portion, flaky fish, and a crisp golden batter.",
+    image: photos.fishAndChips,
+    details: "Confirmed menu price from guest writeups. Confirm still current.",
   },
   {
     id: "shrimp",
     category: "Signature",
     name: "Shrimp & Chips",
-    description: "Golden shrimp with chips and your choice of sauce.",
+    description: "Golden shrimp, chips, and choice of sauce.",
     price: "$11.95",
-    image:
-      "https://images.unsplash.com/photo-1559742811-822873691df8?w=700&q=80",
-    details: "Try it with tartar or savory curry sauce.",
+    image: photos.shrimpAndChips,
+    details: "Confirmed menu price from guest writeups. Confirm still current.",
   },
   {
     id: "pretzel",
     category: "Starters",
     name: "Pretzel & Beer Cheese",
     description: "Warm soft pretzel with rich beer cheese.",
+    // TODO: confirm price with restaurant
     price: "$9.95",
-    image:
-      "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=700&q=80",
-    details: "A guest favorite: soft, chewy, and perfectly crisp outside.",
+    image: photos.pretzelBeerCheese,
+    details: "Price needs confirmation. Dish itself is a documented guest favorite.",
   },
   {
     id: "tenders",
     category: "Mains",
     name: "Chicken Tenders",
-    description: "Huge tenders with your choice of dipping sauce.",
+    description: "Huge tenders with dipping sauce.",
+    // TODO: confirm price with restaurant
     price: "$12.95",
-    image:
-      "https://images.unsplash.com/photo-1562967914-608f82629710?w=700&q=80",
-    details: "Crispy, filling, and always a hit with the kids.",
+    image: photos.chickenTenders,
+    details: "Price needs confirmation.",
   },
   {
     id: "beer",
     category: "Drinks",
-    name: "UK Beers & Pints",
-    description: "A rotating selection of cold beers and pub pours.",
-    price: "From $6",
-    image:
-      "https://images.unsplash.com/photo-1436076863939-06870fe779c2?w=700&q=80",
-    details: "Pair a pint with fish, wings, or pretzel and beer cheese.",
+    name: "UK Draft Beer",
+    description: "Rotating British and craft pours at the bar.",
+    // TODO: confirm starting price with restaurant
+    price: "Ask at bar",
+    image: photos.ukBeers,
+    details: "Do not publish a guessed beer price. Confirm on site.",
   },
 ];
 
 export const galleryImages: GalleryImage[] = [
   {
     id: "g1",
-    src: "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=900&q=80",
-    alt: "Crispy fish and chips",
+    src: photos.gallery[0],
+    alt: "Fish and chips from Washington's Wharf",
     category: "food",
     span: "wide",
   },
   {
     id: "g2",
-    src: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=700&q=80",
-    alt: "Warm casual restaurant interior",
+    src: photos.gallery[1],
+    alt: "Dining room at Washington's Wharf",
     category: "dining",
     span: "tall",
   },
   {
     id: "g3",
-    src: "https://images.unsplash.com/photo-1559742811-822873691df8?w=700&q=80",
-    alt: "Golden fried shrimp",
+    src: photos.gallery[2],
+    alt: "Shrimp and chips",
     category: "food",
   },
   {
     id: "g4",
-    src: "https://images.unsplash.com/photo-1436076863939-06870fe779c2?w=700&q=80",
-    alt: "Cold beer at the bar",
+    src: photos.gallery[3],
+    alt: "Pints at the bar",
     category: "cocktails",
   },
   {
     id: "g5",
-    src: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=900&q=80",
-    alt: "Soft pretzel with dipping sauce",
+    src: photos.gallery[4],
+    alt: "Pretzel and beer cheese",
     category: "food",
     span: "wide",
   },
   {
     id: "g6",
-    src: "https://images.unsplash.com/photo-1562967914-608f82629710?w=700&q=80",
-    alt: "Crispy chicken tenders",
+    src: photos.gallery[5],
+    alt: "Chicken tenders",
     category: "food",
     span: "tall",
   },
   {
     id: "g7",
-    src: "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=700&q=80",
-    alt: "Welcoming bar seating",
-    category: "dining",
+    src: photos.gallery[6],
+    alt: "British-style chips",
+    category: "food",
   },
   {
     id: "g8",
-    src: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=700&q=80",
-    alt: "Saucy chicken wings",
+    src: photos.gallery[7],
+    alt: "Wings",
     category: "food",
   },
   {
     id: "g9",
-    src: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=700&q=80",
-    alt: "Casual table setting",
+    src: photos.gallery[8],
+    alt: "Table seating",
     category: "dining",
   },
   {
     id: "g10",
-    src: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=700&q=80",
-    alt: "Cocktails ready to serve",
+    src: photos.gallery[9],
+    alt: "Cocktails from the bar",
     category: "cocktails",
   },
   {
     id: "g11",
-    src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&q=80",
-    alt: "Friends dining together",
+    src: photos.gallery[10],
+    alt: "Guests at Washington's Wharf",
     category: "events",
     span: "wide",
   },
   {
     id: "g12",
-    src: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=700&q=80",
-    alt: "Thick-cut chips",
-    category: "food",
+    src: photos.gallery[11],
+    alt: "Washington's Wharf storefront in Cumming City Center",
+    category: "dining",
   },
 ];
 
+/** Paraphrased from public guest reviews (Grubbio / local listings). Keep attribution style casual. */
 export const testimonials: Testimonial[] = [
   {
     id: "t1",
     quote:
-      "I fancy myself a fish and chips connoisseur, and this place is incredible. It rivals any of the best I've had in the UK.",
+      "I fancy myself a fish and chips connoisseur, and this place is incredible. My wife and I go to the UK every year and I eat fish and chips about ten times. This rivals any of the best I've had. Only complaint is it isn't closer to Acworth.",
     author: "Jason K.",
-    detail: "Regular Guest",
+    detail: "Google / local review",
   },
   {
     id: "t2",
     quote:
-      "The fish was melt-in-your-mouth amazing. The pretzel was wonderful, and the staff made us feel right at home.",
-    author: "Hannah M.",
-    detail: "First-Time Guest",
+      "Better than the previous spot. Tartar sauce has better flavor, fries and chips are both great, and the fish is the star: crispy, large portion, cooked right. Kids' tenders were huge. They added a bar area and the seats are actually comfortable. 80s hits, not too loud.",
+    author: "Cameron",
+    detail: "Local review",
   },
   {
     id: "t3",
     quote:
-      "Fish and chips just like in the UK. Very fresh fish, great batter, perfect chips, and a bar with many UK beers.",
-    author: "Paul L.",
-    detail: "Local Favorite",
+      "Lovely little spot. Fish was melt-in-your-mouth. The pretzel was wonderful. The woman working the front was so jovial and sweet. We will definitely be returning.",
+    author: "Hannah McCurry",
+    detail: "Local review",
   },
   {
     id: "t4",
     quote:
-      "One of the best lunches we've had in years. The fish, fries, shrimp, beers, and cocktails were all fantastic.",
-    author: "Hailey T.",
-    detail: "Sunday Lunch",
+      "Fish and chips just like in the UK. Very fresh fish, great batter, perfect chips, reasonably priced. Integrating a bar with many UK beers was a masterstroke. It gets a bit noisy when busy, but quality is holding.",
+    author: "Paul Littlewood",
+    detail: "Local review",
+  },
+  {
+    id: "t5",
+    quote:
+      "Takeout first visit and I was impressed. Chips were delicious. Beer cheese and pretzel might've been the best pretzel I've ever had: soft, chewy, slightly crispy outside. Support local!",
+    author: "Ariel Boyer",
+    detail: "Local review",
+  },
+  {
+    id: "t6",
+    quote:
+      "Stumbled in on a Sunday and had one of the best lunches we've had in years. Fish was perfect, fries sizzling, shrimp juicy. Beers and cocktails just as good. Staff, food, drinks: 20/10.",
+    author: "Hailey Thompson",
+    detail: "Local review",
   },
 ];
 
 export const stats: Stat[] = [
-  { value: "4.8★", label: "Guest Rating" },
-  { value: "50+", label: "5-Star Reviews" },
-  { value: "11:30", label: "Open Daily" },
-  { value: "1", label: "Mission: Great Fish & Chips" },
+  { value: "4.8★", label: "Average guest rating" },
+  { value: "11:30", label: "Open every day" },
+  { value: "H101", label: "Cumming City Center" },
+  { value: "UK", label: "Beers at the bar" },
 ];
 
 export const eventSpaces: EventSpace[] = [
   {
     id: "dining",
-    name: "Main Dining",
-    capacity: "Groups welcome",
+    name: "Dining room tables",
+    capacity: "Best for small groups",
     description:
-      "Casual tables, comfortable seats, and room for friends, families, and small celebrations.",
-    image:
-      "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1000&q=80",
+      "Open dining room, not a private banquet suite. Great for birthdays and family tables when you want baskets on the table and conversation that stays easy.",
+    image: photos.diningRoom,
   },
   {
     id: "bar",
-    name: "Bar Area",
-    capacity: "Grab a seat",
+    name: "Bar seats",
+    capacity: "Walk-ins welcome",
     description:
-      "Settle in for a pint, a pretzel, and easy conversation by the bar.",
-    image:
-      "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=1000&q=80",
+      "Grab a stool for UK beer, a pretzel, and a quicker bite without waiting on a big table.",
+    image: photos.bar,
   },
   {
     id: "takeout",
-    name: "Takeout & Pickup",
-    capacity: "Call ahead",
+    name: "Call-ahead takeout",
+    capacity: "Tell us your headcount",
     description:
-      "Order for the office, the game, or family night and pick it up hot and ready.",
-    image:
-      "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1000&q=80",
+      "For offices and game day, call (470) 533-2140 and we will stage a pickup order. No event catering kitchen on site.",
+    image: photos.groups.takeout,
   },
 ];
 
@@ -390,76 +408,74 @@ export const faqs: FaqItem[] = [
   {
     question: "Where are you located?",
     answer:
-      "We're in Cumming City Center at 451 Vision Dr, Suite H101, Cumming, GA 30040. Free parking is available nearby, including the parking garage.",
+      "451 Vision Dr, Suite H101, Cumming, GA 30040, inside Cumming City Center near the amphitheatre. Free parking in the garage and nearby lots.",
+  },
+  {
+    question: "What are your hours?",
+    answer:
+      "Monday through Thursday and Sunday: 11:30 AM to 7:00 PM. Friday and Saturday: 11:30 AM to 9:00 PM.",
   },
   {
     question: "Do you take reservations?",
     answer:
-      "Yes. We accept reservations. Call us at (470) 533-2140 or use the reservations form on this site.",
+      "Yes. Call (470) 533-2140 or use the reservations form. Walk-ins are welcome too, especially earlier in the day.",
   },
   {
     question: "Is there a bar?",
     answer:
-      "Yes. We have a welcoming bar area with beer, cocktails, and wine to go with your fish and chips.",
+      "Yes. UK beers, cocktails, and wine by the glass. Guests often mention the bar as a reason they stay longer.",
   },
   {
-    question: "Is the restaurant kid-friendly?",
+    question: "Can you handle a big group?",
     answer:
-      "Absolutely. We have high chairs, changing tables, and kid favorites like chicken tenders.",
-  },
-  {
-    question: "Do you offer takeout?",
-    answer:
-      "Yes. Dine-in, takeaway, and delivery options are available. Call ahead for larger group orders.",
+      "For larger parties, call ahead. We can seat smaller groups in the dining room and build takeout orders for offices and gatherings. We do not have a separate private event hall.",
   },
 ];
 
+/**
+ * Menu items.
+ * Fish $16.95 and shrimp $11.95 confirmed from published guest sources.
+ * All other prices are estimates until ownership confirms a current menu sheet.
+ */
 export const menuItems: MenuItem[] = [
   {
     id: "m1",
     name: "Pretzel & Beer Cheese",
-    description: "Warm soft pretzel with rich beer cheese",
-    price: "$9.95",
+    description: "Warm soft pretzel with beer cheese",
+    price: "Ask",
     category: "starters",
     featured: true,
   },
   {
     id: "m2",
     name: "Mozzarella Sticks",
-    description: "Melty cheese sticks with marinara",
-    price: "$8.95",
+    description: "Cheese sticks with marinara",
+    price: "Ask",
     category: "starters",
   },
   {
     id: "m3",
     name: "Sweet Potato Tots",
-    description: "Crispy tots perfect for sharing",
-    price: "$7.95",
+    description: "Crispy tots for the table",
+    price: "Ask",
     category: "starters",
   },
   {
     id: "m4",
     name: "British Chips & Mushy Peas",
-    description: "Thick-cut chips with classic mushy peas",
-    price: "$6.95",
+    description: "Thick-cut chips with mushy peas",
+    price: "Ask",
     category: "starters",
   },
   {
     id: "m5",
     name: "Wings",
     description: "Saucy wings made for sharing",
-    price: "$12.95",
+    price: "Ask",
     category: "starters",
   },
   {
     id: "m6",
-    name: "Side Salad",
-    description: "Fresh greens with house dressing",
-    price: "$5.95",
-    category: "soups-salads",
-  },
-  {
-    id: "m7",
     name: "Fish & Chips",
     description: "Crispy battered fish with British-style chips",
     price: "$16.95",
@@ -467,122 +483,71 @@ export const menuItems: MenuItem[] = [
     featured: true,
   },
   {
-    id: "m8",
+    id: "m7",
     name: "Shrimp & Chips",
-    description: "Golden shrimp, chips, and choice of sauce",
+    description: "Golden shrimp, chips, tartar or curry sauce",
     price: "$11.95",
     category: "seafood",
     featured: true,
   },
   {
+    id: "m8",
+    name: "Chicken Tenders",
+    description: "Huge crispy tenders with dipping sauce",
+    price: "Ask",
+    category: "sandwiches",
+    featured: true,
+  },
+  {
     id: "m9",
-    name: "Fish Bites",
-    description: "Smaller portion of crispy battered fish",
-    price: "$12.95",
-    category: "seafood",
+    name: "Add Mushy Peas",
+    description: "Classic British side",
+    price: "Ask",
+    category: "pasta",
   },
   {
     id: "m10",
-    name: "Chicken Tenders",
-    description: "Huge crispy tenders with dipping sauce",
-    price: "$12.95",
-    category: "sandwiches",
-    featured: true,
+    name: "Add British Gravy",
+    description: "For dipping chips or fish",
+    price: "Ask",
+    category: "pasta",
   },
   {
     id: "m11",
-    name: "Wing Basket",
-    description: "A fuller order of our saucy wings with chips",
-    price: "$14.95",
-    category: "sandwiches",
+    name: "Add Beer Cheese",
+    description: "The dip guests rave about",
+    price: "Ask",
+    category: "pasta",
   },
   {
     id: "m12",
-    name: "Add Mushy Peas",
-    description: "Classic British side",
-    price: "$2.50",
-    category: "pasta",
-  },
-  {
-    id: "m13",
-    name: "Add British Gravy",
-    description: "Rich gravy for dipping",
-    price: "$2.50",
-    category: "pasta",
-  },
-  {
-    id: "m14",
-    name: "Add Beer Cheese",
-    description: "Our crowd-favorite cheese dip",
-    price: "$3.00",
-    category: "pasta",
-  },
-  {
-    id: "m15",
-    name: "Extra Tartar Sauce",
-    description: "House tartar on the side",
-    price: "$1.00",
-    category: "pasta",
-  },
-  {
-    id: "m16",
-    name: "Chocolate Brownie",
-    description: "Rich brownie for a sweet finish",
-    price: "$5.95",
-    category: "desserts",
-  },
-  {
-    id: "m17",
-    name: "Soft-Serve Cup",
-    description: "A simple cold treat after your chips",
-    price: "$3.95",
-    category: "desserts",
-  },
-  {
-    id: "m18",
     name: "UK Draft Beer",
     description: "Rotating British and craft pours",
-    price: "From $6",
+    price: "Ask at bar",
     category: "cocktails",
     featured: true,
   },
   {
-    id: "m19",
-    name: "House Cocktail",
-    description: "Easy-drinking cocktails from the bar",
-    price: "From $9",
+    id: "m13",
+    name: "Cocktails",
+    description: "Bar cocktails with your basket",
+    price: "Ask at bar",
     category: "cocktails",
   },
   {
-    id: "m20",
-    name: "Soft Drinks",
-    description: "Fountain favorites",
-    price: "$2.95",
-    category: "cocktails",
-  },
-  {
-    id: "m21",
-    name: "House White Wine",
-    description: "Chilled glass from the bar",
-    price: "$7",
-    category: "wine",
-  },
-  {
-    id: "m22",
-    name: "House Red Wine",
-    description: "Easy-sipping red by the glass",
-    price: "$7",
+    id: "m14",
+    name: "Wine by the Glass",
+    description: "White or red",
+    price: "Ask at bar",
     category: "wine",
   },
 ];
 
 export const menuCategories: { id: MenuItem["category"]; label: string }[] = [
   { id: "starters", label: "Starters" },
-  { id: "soups-salads", label: "Salads" },
   { id: "seafood", label: "Fish & Seafood" },
   { id: "sandwiches", label: "Baskets & Mains" },
   { id: "pasta", label: "Add-Ons" },
-  { id: "desserts", label: "Sweets" },
   { id: "cocktails", label: "Drinks" },
   { id: "wine", label: "Wine" },
 ];
@@ -590,38 +555,32 @@ export const menuCategories: { id: MenuItem["category"]; label: string }[] = [
 export const instagramPosts = [
   {
     id: "ig1",
-    image:
-      "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=600&q=80",
-    caption: "Crispy fish, golden chips.",
+    image: photos.instagram[0],
+    caption: "Tuesday fish & chips run. Batter still crackling.",
   },
   {
     id: "ig2",
-    image:
-      "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=80",
-    caption: "Pretzel and beer cheese, always.",
+    image: photos.instagram[1],
+    caption: "Pretzel landed. Beer cheese did not survive long.",
   },
   {
     id: "ig3",
-    image:
-      "https://images.unsplash.com/photo-1436076863939-06870fe779c2?w=600&q=80",
-    caption: "Pints ready at the bar.",
+    image: photos.instagram[2],
+    caption: "UK pint at the H101 bar before the amphitheatre show.",
   },
   {
     id: "ig4",
-    image:
-      "https://images.unsplash.com/photo-1562967914-608f82629710?w=600&q=80",
-    caption: "Tenders for the whole table.",
+    image: photos.instagram[3],
+    caption: "Tender count: ordered two, needed three.",
   },
   {
     id: "ig5",
-    image:
-      "https://images.unsplash.com/photo-1559742811-822873691df8?w=600&q=80",
-    caption: "Shrimp basket, sorted.",
+    image: photos.instagram[4],
+    caption: "Shrimp & chips with curry sauce, no notes.",
   },
   {
     id: "ig6",
-    image:
-      "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&q=80",
-    caption: "Good eats and good vibes.",
+    image: photos.instagram[5],
+    caption: "Friday night in Cumming City Center. Come hungry.",
   },
 ];

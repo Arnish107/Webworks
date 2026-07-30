@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { Photo } from "@/components/ui/photo";
 
 export function PageHero({
   eyebrow,
@@ -16,11 +17,14 @@ export function PageHero({
 }) {
   return (
     <section className="relative flex min-h-[70vh] items-end overflow-hidden pb-16 pt-32 md:min-h-[78vh] md:pb-24">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${image})` }}
-        role="img"
-        aria-label={title}
+      <Photo
+        src={image}
+        alt={title}
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+        slotLabel={image}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/70 to-navy/30" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(14,34,56,0.45)_100%)]" />

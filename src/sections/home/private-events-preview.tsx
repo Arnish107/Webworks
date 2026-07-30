@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import { eventTypes } from "@/data/site";
+import { eventTypes, siteConfig } from "@/data/site";
 import { Reveal } from "@/components/effects/motion";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { Button } from "@/components/ui/button";
+import { Photo } from "@/components/ui/photo";
 
 export function PrivateEventsPreview() {
   return (
@@ -14,12 +14,12 @@ export function PrivateEventsPreview() {
         <Reveal>
           <div className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
             <SectionHeading
-              eyebrow="Gather"
-              title="Groups & Celebrations"
-              description="Birthdays, office lunches, family nights, and game-day orders made easy."
+              eyebrow="Groups"
+              title="Feeding more than a two-top"
+              description={`No private banquet hall. Just a dining room, a bar, and call-ahead takeout. For bigger orders, dial ${siteConfig.phone}.`}
             />
             <Button asChild variant="outline">
-              <Link href="/private-events">Plan a Group Visit</Link>
+              <Link href="/private-events">Group options</Link>
             </Button>
           </div>
         </Reveal>
@@ -28,12 +28,13 @@ export function PrivateEventsPreview() {
           {eventTypes.map((event, i) => (
             <Reveal key={event.id} delay={i * 0.05}>
               <article className="group relative aspect-[3/4] overflow-hidden rounded-[1.25rem] lg:aspect-[2/3]">
-                <Image
+                <Photo
                   src={event.image}
                   alt={event.title}
                   fill
                   sizes="(max-width: 768px) 50vw, 20vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  slotLabel={event.image}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-5">

@@ -8,6 +8,7 @@ import { BackToTop } from "@/components/effects/motion";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { restaurantJsonLd } from "@/lib/seo";
+import { photos } from "@/data/images";
 import { siteConfig } from "@/data/site";
 import "./globals.css";
 
@@ -52,10 +53,10 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1200&q=80",
+        url: photos.og,
         width: 1200,
         height: 630,
-        alt: "Fish and chips from Washington's Wharf",
+        alt: "Washington's Wharf fish and chips in Cumming, GA",
       },
     ],
   },
@@ -63,9 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${siteConfig.name} | ${siteConfig.tagline}`,
     description: siteConfig.description,
-    images: [
-      "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1200&q=80",
-    ],
+    images: [photos.og],
   },
   robots: {
     index: true,

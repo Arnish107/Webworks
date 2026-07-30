@@ -1,4 +1,5 @@
 import { HeroSection } from "@/sections/home/hero";
+import { VisitStrip } from "@/sections/home/visit-strip";
 import { WelcomeSection } from "@/sections/home/welcome";
 import { SignatureDiningSection } from "@/sections/home/signature-dining";
 import { HarborExperienceSection } from "@/sections/home/harbor-experience";
@@ -13,6 +14,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <VisitStrip />
       <WelcomeSection />
       <SignatureDiningSection />
       <HarborExperienceSection />

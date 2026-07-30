@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { harborExperiences } from "@/data/site";
 import { ParallaxImage, Reveal } from "@/components/effects/motion";
 import { SectionHeading } from "@/components/layout/section-heading";
+import { Photo } from "@/components/ui/photo";
 import { cn } from "@/lib/utils";
 
 export function HarborExperienceSection() {
@@ -12,9 +12,9 @@ export function HarborExperienceSection() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
           <SectionHeading
-            eyebrow="The Experience"
-            title="Why Locals Keep Coming Back"
-            description="Crispy classics, friendly service, and a cozy spot in Cumming City Center."
+            eyebrow="Why people come back"
+            title="Not a template restaurant story"
+            description="Specific things guests mention: the batter, the bar, the 80s playlist, and how easy it is to park at City Center."
             className="mb-16"
           />
         </Reveal>
@@ -29,12 +29,13 @@ export function HarborExperienceSection() {
               >
                 <Reveal className={cn(reverse && "md:order-2")}>
                   <ParallaxImage className="relative aspect-[16/11] rounded-[1.75rem]">
-                    <Image
+                    <Photo
                       src={item.image}
                       alt={item.title}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover"
+                      slotLabel={item.image}
                     />
                   </ParallaxImage>
                 </Reveal>

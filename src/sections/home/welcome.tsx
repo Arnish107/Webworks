@@ -1,10 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Reveal, ParallaxImage } from "@/components/effects/motion";
 import { Button } from "@/components/ui/button";
+import { Photo } from "@/components/ui/photo";
 import { SectionHeading } from "@/components/layout/section-heading";
+import { photos } from "@/data/images";
+import { siteConfig } from "@/data/site";
 
 export function WelcomeSection() {
   return (
@@ -12,12 +14,13 @@ export function WelcomeSection() {
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:grid-cols-2 md:gap-16 md:px-8">
         <Reveal>
           <ParallaxImage className="relative aspect-[4/5] rounded-[2rem] md:aspect-[5/6]">
-            <Image
-              src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1000&q=80"
-              alt="Casual restaurant dining room with warm lighting"
+            <Photo
+              src={photos.diningRoom}
+              alt="Dining room at Washington's Wharf"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
+              slotLabel={photos.diningRoom}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent" />
           </ParallaxImage>
@@ -25,18 +28,21 @@ export function WelcomeSection() {
 
         <Reveal delay={0.15}>
           <SectionHeading
-            eyebrow="Welcome"
-            title="Good Eats and Good Vibes in Cumming"
-            description="Washington's Wharf is your spot for authentic British-style fish and chips in Cumming City Center. Come for the crispy batter and flaky fish. Stay for the friendly service, cold pints, and easygoing atmosphere."
+            eyebrow="At H101"
+            title="The fish and chips shop Cumming kept asking for"
+            description="Washington's Wharf sits in Cumming City Center with counter service, a proper bar, and a plate of fish and chips that locals compare to trips across the pond. We took over the British fish-and-chips space on Vision Drive and kept the mission simple: fry it fresh, pour a real pint, and keep the room easy."
           />
           <p className="mt-6 max-w-lg text-sm leading-relaxed text-muted md:text-base">
-            Dig into classics like fish and chips, a golden shrimp basket, juicy
-            chicken tenders, and saucy wings. Kick things off with sweet potato
-            tots, cheese sticks, British chips with mushy peas, or a warm pretzel
-            with rich beer cheese.
+            Start with pretzel and beer cheese. Order fish at $16.95 or shrimp at
+            $11.95. Add mushy peas or gravy if you know. Kids usually go for the
+            tenders. The phone booth still gets a laugh, and the 80s playlist stays
+            in the background where it belongs.
+          </p>
+          <p className="mt-4 text-sm text-sand">
+            {siteConfig.address.full} · {siteConfig.phone}
           </p>
           <Button asChild className="mt-8" variant="outline">
-            <Link href="/about">Our Story</Link>
+            <Link href="/about">How we got here</Link>
           </Button>
         </Reveal>
       </div>

@@ -1,9 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { menuCategories, menuItems } from "@/data/site";
+import { menuCategories, menuItems, siteConfig } from "@/data/site";
+import { photos } from "@/data/images";
 import { PageHero } from "@/components/layout/page-hero";
 import { Reveal } from "@/components/effects/motion";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import type { MenuItem } from "@/types";
 
@@ -27,11 +29,24 @@ export default function MenuPage() {
   return (
     <>
       <PageHero
-        eyebrow="Cuisine"
-        title="The Menu"
-        description="British-style fish and chips, comfort classics, and bar favorites from Cumming City Center."
-        image="https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1600&q=80"
+        eyebrow="Menu"
+        title="What we fry and pour"
+        description={`Fish & Chips $16.95 and Shrimp & Chips $11.95 are the published prices guests cite. Other items say "Ask" until ownership confirms a current sheet. Call ${siteConfig.phone} with questions.`}
+        image={photos.fishAndChips}
       />
+
+      <section className="border-b border-border py-8">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 md:flex-row md:items-center md:justify-between md:px-8">
+          <p className="text-sm text-muted">
+            Want the printable version? Drop a PDF at{" "}
+            <code className="text-sand">{photos.menuPdf}</code> and this button
+            will work.
+          </p>
+          <Button asChild variant="outline">
+            <a href={photos.menuPdf}>Download PDF menu</a>
+          </Button>
+        </div>
+      </section>
 
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-5 md:px-8">

@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { signatureDining } from "@/data/site";
 import { Reveal } from "@/components/effects/motion";
 import { SectionHeading } from "@/components/layout/section-heading";
+import { Photo } from "@/components/ui/photo";
 
 export function SignatureDiningSection() {
   const [active, setActive] = useState<string | null>(null);
@@ -15,9 +15,9 @@ export function SignatureDiningSection() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
           <SectionHeading
-            eyebrow="Favorites"
-            title="What We're Known For"
-            description="Six crowd favorites, from crispy fish to pretzel and beer cheese."
+            eyebrow="Order these"
+            title="What leaves the fryer"
+            description="Six plates and pours guests actually talk about in reviews."
             align="center"
             className="mb-14"
           />
@@ -35,12 +35,13 @@ export function SignatureDiningSection() {
                 tabIndex={0}
                 data-cursor="hover"
               >
-                <Image
+                <Photo
                   src={item.image}
                   alt={item.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110 group-focus-within:scale-110"
+                  slotLabel={item.image}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6">

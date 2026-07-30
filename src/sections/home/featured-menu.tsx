@@ -1,11 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { featuredMenu } from "@/data/site";
 import { Reveal } from "@/components/effects/motion";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { Button } from "@/components/ui/button";
+import { Photo } from "@/components/ui/photo";
+import { photos } from "@/data/images";
 
 export function FeaturedMenuSection() {
   return (
@@ -14,13 +15,20 @@ export function FeaturedMenuSection() {
         <Reveal>
           <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <SectionHeading
-              eyebrow="The Menu"
-              title="Guest Favorites"
-              description="A curated taste of the Wharf, from fish and chips to pretzel and beer cheese."
+              eyebrow="Board specials"
+              title="From the fryer and the bar"
+              description="Fish and shrimp prices below are the published figures guests cite. Other prices: ask when you order until we upload a current menu sheet."
             />
-            <Button asChild>
-              <Link href="/menu">Full Menu</Link>
-            </Button>
+            <div className="flex flex-wrap gap-3">
+              <Button asChild>
+                <Link href="/menu">Full menu page</Link>
+              </Button>
+              <Button asChild variant="outline">
+                <a href={photos.menuPdf}>
+                  PDF menu
+                </a>
+              </Button>
+            </div>
           </div>
         </Reveal>
 
@@ -29,12 +37,13 @@ export function FeaturedMenuSection() {
             <Reveal key={item.id} delay={i * 0.06} className="snap-start">
               <article className="group relative w-[280px] shrink-0 overflow-hidden rounded-[1.5rem] md:w-[320px]">
                 <div className="relative aspect-[4/5]">
-                  <Image
+                  <Photo
                     src={item.image}
                     alt={item.name}
                     fill
                     sizes="320px"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    slotLabel={item.image}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-6 transition-transform duration-500 group-hover:-translate-y-2">

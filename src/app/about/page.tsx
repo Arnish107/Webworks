@@ -1,13 +1,14 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { stats } from "@/data/site";
+import { stats, siteConfig } from "@/data/site";
+import { photos } from "@/data/images";
 import { PageHero } from "@/components/layout/page-hero";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { Reveal } from "@/components/effects/motion";
+import { Photo } from "@/components/ui/photo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,31 +39,35 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="Our Story"
-        title="Fish & Chips with Heart"
-        description="Washington's Wharf brings authentic British-style fish and chips, comfort classics, and a welcoming bar to Cumming City Center."
-        image="https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1600&q=80"
+        eyebrow="About"
+        title="A fryer, a bar, and Suite H101"
+        description="Washington's Wharf is the British fish and chips shop in Cumming City Center. We replaced the previous fish-and-chips tenant on Vision Drive and kept the brief short: fry it right, pour UK beer, treat people well."
+        image={photos.hero}
       />
 
       <section className="py-24 md:py-32">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:grid-cols-2 md:px-8">
           <Reveal>
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
-              <Image
-                src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1000&q=80"
-                alt="Cozy restaurant atmosphere"
+              <Photo
+                src={photos.diningRoom}
+                alt="Inside Washington's Wharf"
                 fill
                 sizes="50vw"
                 className="object-cover"
+                slotLabel={photos.diningRoom}
               />
             </div>
           </Reveal>
           <Reveal delay={0.12}>
             <SectionHeading
-              eyebrow="About Us"
-              title="A Cumming Favorite for Crispy Classics"
-              description="We are all about generous portions, crispy batter, flaky fish, and an easygoing room where friends and families feel at home. Guests come for the fish and chips and stay for the pretzel with beer cheese, the bar, and the friendly staff."
+              eyebrow="The room"
+              title="Built for baskets, not banquet speeches"
+              description="Counter service, a bar guests keep calling a masterstroke, 80s hits at a talkable volume, and a phone booth that still gets pointed out. Free parking in the City Center garage makes the amphitheatre-night dinner run easy."
             />
+            <p className="mt-6 text-sm text-muted">
+              Find us at {siteConfig.address.full}. Call {siteConfig.phone}.
+            </p>
           </Reveal>
         </div>
       </section>
@@ -71,8 +76,8 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading
-              eyebrow="What Matters"
-              title="How We Do Things"
+              eyebrow="How we cook"
+              title="What we refuse to phone in"
               align="center"
               className="mb-14"
             />
@@ -80,16 +85,16 @@ export default function AboutPage() {
           <div className="grid gap-6 md:grid-cols-3">
             {[
               {
-                title: "Crispy & Fresh",
-                text: "Fish fried to order, chips that stay golden, and sauces made to dunk every bite.",
+                title: "Fish fried to order",
+                text: "Guests who eat in the UK keep saying the batter and flake hold up. That is the whole brand promise.",
               },
               {
-                title: "Friendly Service",
-                text: "Fast, welcoming, and happy to help you find the perfect basket, side, or pint.",
+                title: "Sides people argue about",
+                text: "British chips vs fries, mushy peas, gravy, and beer cheese on the pretzel. Pick a side and defend it.",
               },
               {
-                title: "Good Vibes",
-                text: "Casual seating, 80s hits, a solid bar, and a spot that feels great for lunch or dinner.",
+                title: "A bar that matches the food",
+                text: "UK drafts and cocktails that make sense with fried fish, not a decorative wine list nobody orders.",
               },
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 0.08}>
@@ -111,8 +116,8 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading
-              eyebrow="By the Numbers"
-              title="Why Guests Love Us"
+              eyebrow="Quick facts"
+              title="Grounded in Cumming"
               align="center"
               className="mb-14"
             />

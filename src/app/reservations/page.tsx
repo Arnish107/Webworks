@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { siteConfig } from "@/data/site";
+import { photos } from "@/data/images";
 import { cn } from "@/lib/utils";
 
 const times = [
@@ -49,8 +50,8 @@ export default function ReservationsPage() {
       <PageHero
         eyebrow="Reservations"
         title="Book Your Table"
-        description="Reserve a table for fish and chips, comfort classics, and a cold drink in Cumming City Center."
-        image="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1600&q=80"
+        description={`Reserve a table for fish and chips at Suite H101. Prefer the phone? ${siteConfig.phone}.`}
+        image={photos.diningRoom}
       />
 
       <section className="py-16 md:py-24">

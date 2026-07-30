@@ -3,12 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Menu",
   description:
-    "Explore the Washington's Wharf menu: fish and chips, shrimp baskets, chicken tenders, pretzels with beer cheese, wings, and cold drinks in Cumming, GA.",
-  openGraph: {
-    title: "Menu | Washington's Wharf",
-    description:
-      "Crispy fish and chips, comfort classics, and bar favorites in Cumming City Center.",
-  },
+    "Fish & Chips $16.95, Shrimp & Chips $11.95, pretzel and beer cheese, tenders, wings, and UK beers at Washington's Wharf in Cumming, GA.",
 };
 
 export default function MenuLayout({

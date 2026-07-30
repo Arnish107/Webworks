@@ -26,8 +26,9 @@ export function TestimonialsSection() {
       <div className="relative mx-auto max-w-4xl px-5 text-center md:px-8">
         <Reveal>
           <SectionHeading
-            eyebrow="Guest Voices"
-            title="Words from the Wharf"
+            eyebrow="From real reviews"
+            title="What guests actually wrote"
+            description="Pulled and lightly cleaned from public local reviews. Messy on purpose."
             align="center"
             className="mb-14"
           />

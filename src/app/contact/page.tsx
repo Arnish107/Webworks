@@ -10,6 +10,7 @@ import {
   Phone,
 } from "lucide-react";
 import { faqs, hours, siteConfig } from "@/data/site";
+import { photos } from "@/data/images";
 import { PageHero } from "@/components/layout/page-hero";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { Reveal } from "@/components/effects/motion";
@@ -31,8 +32,8 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Connect"
         title="Contact"
-        description="Questions about the menu, hours, parking, or group orders? We're happy to help."
-        image="https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1600&q=80"
+        description={`Questions about the menu, hours, parking at City Center, or a group pickup? Call ${siteConfig.phone} or write ${siteConfig.email}.`}
+        image={photos.diningRoom}
       />
 
       <section className="py-16 md:py-24">

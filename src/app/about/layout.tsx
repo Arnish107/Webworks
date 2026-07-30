@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about Washington's Wharf in Cumming City Center, home of authentic British-style fish and chips, comfort food, and good vibes.",
+    "Washington's Wharf is the British fish and chips shop in Cumming City Center at 451 Vision Dr, Suite H101, with a bar, counter service, and plates guests compare to UK trips.",
 };
 
 export default function AboutLayout({
