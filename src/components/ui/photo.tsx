@@ -18,8 +18,8 @@ function isSvg(src: string) {
 
 /**
  * Restaurant photo helper.
- * Currently serves branded SVG placeholders from /public/images.
- * Drop real JPG/PNG files later and update paths in src/data/images.ts.
+ * Uses Unsplash stand-ins from src/data/images.ts until real H101 photos are uploaded.
+ * Falls back to a branded local SVG if a remote asset fails.
  */
 export function Photo({
   src,

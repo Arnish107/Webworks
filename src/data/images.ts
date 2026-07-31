@@ -1,71 +1,66 @@
 /**
- * Local photo paths for Washington's Wharf.
+ * Photo sources for Washington's Wharf.
  *
- * Right now these point at branded SVG placeholders.
- * Swap any path to a real .jpg/.png with the same basename when you have shots.
- *
- * PHOTO CHECKLIST (replace placeholders with real photos):
- * [ ] /images/hero/fish-and-chips.jpg
- * [ ] /images/hero/cta-banner.jpg
- * [ ] /images/interior/dining-room.jpg
- * [ ] /images/interior/bar.jpg
- * [ ] /images/interior/phone-booth.jpg
- * [ ] /images/menu/fish-and-chips.jpg
- * [ ] /images/menu/shrimp-and-chips.jpg
- * [ ] /images/menu/chicken-tenders.jpg
- * [ ] /images/menu/wings.jpg
- * [ ] /images/menu/pretzel-beer-cheese.jpg
- * [ ] /images/menu/uk-beers.jpg
- * [ ] /images/gallery/01-fish-and-chips.jpg ... 12-exterior-or-storefront.jpg
- * [ ] /images/groups/*.jpg
- * [ ] /images/instagram/01.jpg ... 06.jpg
- * [ ] /images/og/social-share.jpg
- * [ ] /menu/washingtons-wharf-menu.pdf
+ * Temporary Unsplash stand-ins until real H101 shots are uploaded under /public/images.
+ * Swap any URL to a local .jpg/.png path when you have the real file.
  */
 
 export const photos = {
-  hero: "/images/hero/fish-and-chips.svg",
-  ctaBanner: "/images/hero/cta-banner.svg",
-  diningRoom: "/images/interior/dining-room.svg",
-  bar: "/images/interior/bar.svg",
-  phoneBooth: "/images/interior/phone-booth.svg",
-  fishAndChips: "/images/menu/fish-and-chips.svg",
-  shrimpAndChips: "/images/menu/shrimp-and-chips.svg",
-  chickenTenders: "/images/menu/chicken-tenders.svg",
-  wings: "/images/menu/wings.svg",
-  pretzelBeerCheese: "/images/menu/pretzel-beer-cheese.svg",
-  ukBeers: "/images/menu/uk-beers.svg",
-  og: "/images/og/social-share.svg",
+  hero: "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1600&q=80",
+  ctaBanner:
+    "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1600&q=80",
+  diningRoom:
+    "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200&q=80",
+  bar: "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=1200&q=80",
+  phoneBooth:
+    "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=900&q=80",
+  fishAndChips:
+    "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1000&q=80",
+  shrimpAndChips:
+    "https://images.unsplash.com/photo-1559742811-822873691df8?w=1000&q=80",
+  chickenTenders:
+    "https://images.unsplash.com/photo-1562967914-608f82629710?w=1000&q=80",
+  wings: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=1000&q=80",
+  pretzelBeerCheese:
+    "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=1000&q=80",
+  ukBeers: "https://images.unsplash.com/photo-1436076863939-06870fe779c2?w=1000&q=80",
+  og: "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=1200&q=80",
   menuPdf: "/menu/washingtons-wharf-menu.pdf",
   gallery: [
-    "/images/gallery/01-fish-and-chips.svg",
-    "/images/gallery/02-dining-room.svg",
-    "/images/gallery/03-shrimp.svg",
-    "/images/gallery/04-bar-pints.svg",
-    "/images/gallery/05-pretzel.svg",
-    "/images/gallery/06-tenders.svg",
-    "/images/gallery/07-chips.svg",
-    "/images/gallery/08-wings.svg",
-    "/images/gallery/09-table.svg",
-    "/images/gallery/10-cocktails.svg",
-    "/images/gallery/11-group.svg",
-    "/images/gallery/12-exterior-or-storefront.svg",
+    "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=900&q=80",
+    "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=700&q=80",
+    "https://images.unsplash.com/photo-1559742811-822873691df8?w=700&q=80",
+    "https://images.unsplash.com/photo-1436076863939-06870fe779c2?w=700&q=80",
+    "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=900&q=80",
+    "https://images.unsplash.com/photo-1562967914-608f82629710?w=700&q=80",
+    "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=700&q=80",
+    "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=700&q=80",
+    "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=700&q=80",
+    "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=700&q=80",
+    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&q=80",
+    "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=700&q=80",
   ],
   groups: {
-    birthday: "/images/groups/birthday.svg",
-    office: "/images/groups/office-lunch.svg",
-    gameDay: "/images/groups/game-day.svg",
-    family: "/images/groups/family.svg",
-    takeout: "/images/groups/takeout.svg",
+    birthday:
+      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=900&q=80",
+    office:
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80",
+    gameDay:
+      "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=900&q=80",
+    family:
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80",
+    takeout:
+      "https://images.unsplash.com/photo-1559742811-822873691df8?w=900&q=80",
   },
   instagram: [
-    "/images/instagram/01.svg",
-    "/images/instagram/02.svg",
-    "/images/instagram/03.svg",
-    "/images/instagram/04.svg",
-    "/images/instagram/05.svg",
-    "/images/instagram/06.svg",
+    "https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=600&q=80",
+    "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=80",
+    "https://images.unsplash.com/photo-1436076863939-06870fe779c2?w=600&q=80",
+    "https://images.unsplash.com/photo-1562967914-608f82629710?w=600&q=80",
+    "https://images.unsplash.com/photo-1559742811-822873691df8?w=600&q=80",
+    "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&q=80",
   ],
 } as const;
 
+/** Local branded fallback if a remote image fails to load. */
 export const PLACEHOLDER_SRC = "/images/placeholder.svg";

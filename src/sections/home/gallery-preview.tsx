@@ -19,7 +19,7 @@ export function GalleryPreviewSection() {
             <SectionHeading
               eyebrow="Photos"
               title="Shot here, not from a stock library"
-              description="These slots are waiting for real plates, the bar, the phone booth, and the Vision Drive storefront. Until then you will see labeled placeholders."
+              description="A look at the plates, the bar, and the room. Real H101 shots will replace these stand-ins when they are ready."
             />
             <Button asChild variant="outline" className="w-full sm:w-auto">
               <Link href="/gallery">Open gallery</Link>

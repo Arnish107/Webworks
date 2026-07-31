@@ -20,7 +20,7 @@ export function InstagramSection() {
             <SectionHeading
               eyebrow="@washingtonswharf"
               title="What we post when the fryer is busy"
-              description="Preview tiles only. For live photos, follow the Instagram account. Drop real exports into /images/instagram to replace placeholders."
+              description="Preview tiles for now. Follow the Instagram for live shots, or drop exports into /images/instagram later."
             />
             <a
               href={siteConfig.social.instagram}

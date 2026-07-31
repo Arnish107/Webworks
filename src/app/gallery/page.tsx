@@ -30,7 +30,7 @@ export default function GalleryPage() {
       <PageHero
         eyebrow="Gallery"
         title="Plates, pints, and the room"
-        description="Every tile points at a local file under /public/images/gallery. Replace the placeholders with shots from H101."
+        description="Plates, pints, and the room. Stand-in photos for now; swap in shots from H101 when you have them."
         image={photos.diningRoom}
       />
 
