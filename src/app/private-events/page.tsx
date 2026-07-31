@@ -76,15 +76,15 @@ export default function PrivateEventsPage() {
               className="mb-10 max-w-3xl"
             />
           </Reveal>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 lg:grid-cols-5">
             {eventTypes.map((event, i) => (
               <Reveal key={event.id} delay={i * 0.05}>
-                <article className="group relative aspect-[3/4] overflow-hidden rounded-2xl">
+                <article className="group relative aspect-[4/5] overflow-hidden rounded-2xl sm:aspect-[3/4]">
                   <Photo
                     src={event.image}
                     alt={event.title}
                     fill
-                    sizes="20vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     slotLabel={event.image}
                   />
@@ -93,7 +93,9 @@ export default function PrivateEventsPage() {
                     <h3 className="font-display text-xl text-ivory">
                       {event.title}
                     </h3>
-                    <p className="mt-2 text-xs text-ivory/70">{event.description}</p>
+                    <p className="mt-2 text-xs leading-relaxed text-ivory/70">
+                      {event.description}
+                    </p>
                   </div>
                 </article>
               </Reveal>

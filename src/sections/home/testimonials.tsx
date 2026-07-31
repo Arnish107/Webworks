@@ -21,20 +21,20 @@ export function TestimonialsSection() {
   const current = testimonials[index];
 
   return (
-    <section className="relative overflow-hidden py-24 md:py-32">
+    <section className="relative overflow-hidden py-16 sm:py-24 md:py-32">
       <div className="pointer-events-none absolute inset-0 ambient-gradient opacity-40" />
-      <div className="relative mx-auto max-w-4xl px-5 text-center md:px-8">
+      <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-5 md:px-8">
         <Reveal>
           <SectionHeading
             eyebrow="From real reviews"
             title="What guests actually wrote"
             description="Pulled and lightly cleaned from public local reviews. Messy on purpose."
             align="center"
-            className="mb-14"
+            className="mb-10 sm:mb-14"
           />
         </Reveal>
 
-        <div className="relative min-h-[240px]">
+        <div className="relative min-h-0">
           <AnimatePresence mode="wait">
             <motion.blockquote
               key={current.id}
@@ -42,12 +42,12 @@ export function TestimonialsSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="px-2"
+              className="px-1 sm:px-2"
             >
-              <p className="font-display text-2xl leading-relaxed tracking-wide text-foreground md:text-4xl text-balance">
+              <p className="font-display text-xl leading-relaxed tracking-wide text-foreground sm:text-2xl md:text-4xl text-balance">
                 &ldquo;{current.quote}&rdquo;
               </p>
-              <footer className="mt-8">
+              <footer className="mt-6 sm:mt-8">
                 <cite className="not-italic text-sm tracking-[0.12em] text-gold">
                   {current.author}
                 </cite>
@@ -59,7 +59,7 @@ export function TestimonialsSection() {
           </AnimatePresence>
         </div>
 
-        <div className="mt-10 flex items-center justify-center gap-3">
+        <div className="mt-8 flex items-center justify-center gap-3 sm:mt-10">
           <Button
             variant="outline"
             size="icon"
@@ -78,8 +78,8 @@ export function TestimonialsSection() {
                 role="tab"
                 aria-selected={i === index}
                 aria-label={`Show testimonial ${i + 1}`}
-                className={`focus-ring h-2 rounded-full transition-all duration-300 ${
-                  i === index ? "w-8 bg-gold" : "w-2 bg-muted/50"
+                className={`focus-ring h-2.5 min-w-2.5 rounded-full transition-all duration-300 ${
+                  i === index ? "w-8 bg-gold" : "w-2.5 bg-muted/50"
                 }`}
                 onClick={() => setIndex(i)}
               />

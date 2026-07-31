@@ -35,23 +35,23 @@ export default function MenuPage() {
         image={photos.fishAndChips}
       />
 
-      <section className="border-b border-border py-8">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 md:flex-row md:items-center md:justify-between md:px-8">
+      <section className="border-b border-border py-6 sm:py-8">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 sm:px-5 md:flex-row md:items-center md:justify-between md:px-8">
           <p className="text-sm text-muted">
             Want the printable version? Drop a PDF at{" "}
-            <code className="text-sand">{photos.menuPdf}</code> and this button
-            will work.
+            <code className="break-all text-sand">{photos.menuPdf}</code> and this
+            button will work.
           </p>
-          <Button asChild variant="outline">
+          <Button asChild variant="outline" className="w-full shrink-0 sm:w-auto">
             <a href={photos.menuPdf}>Download PDF menu</a>
           </Button>
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
+      <section className="py-12 sm:py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-5 md:px-8">
           <nav
-            className="mb-14 flex flex-wrap gap-2"
+            className="-mx-4 mb-10 flex gap-2 overflow-x-auto px-4 pb-2 custom-scrollbar sm:mx-0 sm:mb-14 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0"
             aria-label="Menu categories"
           >
             <CategoryChip
@@ -126,7 +126,7 @@ function CategoryChip({
       type="button"
       onClick={onClick}
       className={cn(
-        "focus-ring rounded-full px-4 py-2 text-[11px] uppercase tracking-[0.18em] transition-all duration-300",
+        "focus-ring shrink-0 rounded-full px-4 py-2.5 text-[11px] uppercase tracking-[0.18em] transition-all duration-300",
         active
           ? "bg-gold text-navy"
           : "border border-border text-muted hover:border-gold hover:text-gold"

@@ -107,7 +107,7 @@ export default function ReservationsPage() {
                 <div>
                   <Label className="mb-3 block">Preferred Time</Label>
                   <div
-                    className="grid grid-cols-3 gap-2 sm:grid-cols-4"
+                    className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4"
                     role="listbox"
                     aria-label="Available times"
                   >

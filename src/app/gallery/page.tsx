@@ -90,8 +90,8 @@ export default function GalleryPage() {
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                       slotLabel={image.src}
                     />
-                    <div className="absolute inset-0 bg-navy/0 transition-colors duration-500 group-hover:bg-navy/25" />
-                    <figcaption className="absolute inset-x-0 bottom-0 translate-y-2 p-4 text-sm text-ivory opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent md:bg-navy/0 md:group-hover:bg-navy/25" />
+                    <figcaption className="absolute inset-x-0 bottom-0 translate-y-0 bg-gradient-to-t from-navy/80 to-transparent p-4 text-sm text-ivory opacity-100 transition-all duration-500 md:translate-y-2 md:bg-transparent md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
                       {image.alt}
                     </figcaption>
                   </div>

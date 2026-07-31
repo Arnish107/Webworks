@@ -36,7 +36,7 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-border bg-navy text-ivory">
       <div className="pointer-events-none absolute inset-0 ambient-gradient opacity-60" />
-      <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-2 md:px-8 lg:grid-cols-4 lg:py-20">
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:gap-12 sm:px-5 sm:py-16 md:grid-cols-2 md:px-8 lg:grid-cols-4 lg:py-20">
         <div className="lg:col-span-1">
           <p className="font-display text-3xl tracking-[0.06em]">
             Washington&apos;s Wharf

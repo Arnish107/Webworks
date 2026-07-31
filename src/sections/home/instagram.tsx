@@ -13,10 +13,10 @@ import { Photo } from "@/components/ui/photo";
  */
 export function InstagramSection() {
   return (
-    <section className="relative py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-5 md:px-8">
+    <section className="relative py-16 sm:py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-5 md:px-8">
         <Reveal>
-          <div className="mb-12 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+          <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:mb-12 md:flex-row md:items-end">
             <SectionHeading
               eyebrow="@washingtonswharf"
               title="What we post when the fryer is busy"
@@ -26,7 +26,7 @@ export function InstagramSection() {
               href={siteConfig.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="focus-ring inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-gold transition-colors hover:text-sand"
+              className="focus-ring inline-flex min-h-11 items-center gap-2 text-xs uppercase tracking-[0.22em] text-gold transition-colors hover:text-sand"
             >
               <InstagramIcon className="h-4 w-4" />
               Open Instagram
